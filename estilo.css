@@ -1,0 +1,25 @@
+body{
+  margin: 0;
+  
+}
+ol, ul, li{
+  list-style: none;
+}
+.perfi{
+  max-width: 426px;
+  max-height: 926px;
+}
+
+
+
+#bgperfil{
+  width: 426px;
+  height: 70px;
+  background-color: #75228A;
+}
+
+.sessoes{
+  display: flex;
+  justify-content: space-around;
+}
+
