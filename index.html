@@ -4,25 +4,73 @@
     <title>Cardápio online</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="perfil">
-        <div id="bgperfil"></div>
-        <div class="foto">
-            <img src="" alt="">
-            <label for="Vilaçai"></label>
-        </div>
 
-        <label class="estadofunc" for="">Aberto</label> <br>
-        <label for="">Pedido minímo</label> <label>R$ 10,00</p>
-        <label>Ass: Exeto para o Freitas,<br>pedido minímo</label><p>R$ 25,00</p>
-    </div>
+    <main>
+      <div id="bgperfil"></div>
 
-    <nav class="sessoes">
-            <li class="acai"><a href="#">Açai</a></li>
-            <li class="sorvetes"><a href="#">Sorvetes</a></li>
-            <li class="snacks"><a href="#">Snacks</a></li>
-            <li class="bebidas"><a href="#">Bebidas</a></li>
-    </nav>
+      <div id="foto">
+        <div id="bgfoto"><img id="fotoperfil"src="imagens/fotoperfil.jpeg" alt=""></div>
+        <label id="lbtitulo" for="">Vilaçaí</label>
+      </div>
+
+      <!-- <label id="lbestado" for="">Aberto</label> -->
+
+      
+
+      <div class="tab">
+        <button class="tablinks" onclick="openSession(event, 'Acai')">Açai</button>
+        <button class="tablinks" onclick="openSession(event, 'Sorvetes')">Sorvetes</button>
+        <button class="tablinks" onclick="openSession(event, 'Snacks')">Snacks</button>
+        <button class="tablinks" onclick="openSession(event, 'Bebidas')">Bebidas</button>
+      </div>
+      
+
+
+
+      <div id="Acai" class="tabcontent">
+        <h3>Açai</h3>
+        <p>Opções de Açai</p>
+      </div>
+      
+      <div id="Sorvetes" class="tabcontent">
+        <h3>Sorvetes</h3>
+        <p>Opções de Sorvetes</p> 
+      </div>
+      
+      <div id="Snacks" class="tabcontent">
+        <h3>Snacks</h3>
+        <p>Opções de Snacks</p>
+      </div>
+
+      <div id="Bebidas" class="tabcontent">
+        <h3>Bebidas</h3>
+        <p>Opções de Bebidas</p>
+      </div>
+      
+    </main>
+    
+    
+    <script>
+    function openSession(evt, sessionName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(sessionName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    </script>
+  
   </body>
+  
 </html>
