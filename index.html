@@ -6,6 +6,8 @@
     
     <link rel="stylesheet" href="styles/estilo.css">
     <link rel="stylesheet" href="styles/tabs.css">
+    <link rel="stylesheet" href="styles/modalinfo.css">
+    <link rel="stylesheet" href="styles/global.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,14 +45,20 @@
       
 
       <div class="modalinfo">
-        <img onclick="closemodal()" id="iconarrow" src="imagens/arrow-left.svg" alt="">
+        <img onclick="closemodal()" id="iconarrow" src="imagens/icones/arrow-left.svg" alt="">
         
         <label id="lbmaisinfo" for="">Mais informações</label>
 
         <p class="txtinfo" for=""><b>Horário de funcionamento:</b> De 18h ás 22h e fechado as Terças</p>
         <p class="txtinfo"for=""><b>Endereço:</b> Vila Santa Izabel , Rua Newman Queiroz, 20</p>
+       
+        <button id="btncopiarlink">
+          <svg  id="iconcopy" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        Copiar link</button>
 
-        <button id="btncopiarlink"> <img id="iconcopy" src="imagens/copy.svg" alt="">Copiar link</button>
       </div>
 
       
@@ -66,13 +74,58 @@
 
 
       <div id="Acai" class="tabcontent">
-        <h3>Açai</h3>
-        <p>Opções de Açai</p>
+      <!-- copo -->
+        <div class="produto">
+          <div class="infoproduto">
+            <p class="descricao">Copo 300mL</p>
+            <p class="precoproduto">R$ 10,00</p>
+          </div>
+          <img class="fotoacai" src="imagens/copo.jpeg" alt="">
+        </div>
+
+        <div class="produto">
+          <div class="infoproduto">
+            <p class="descricao">Copo 400mL</p>
+            <p class="precoproduto">R$ 12,00</p>
+          </div>
+          <img class="fotoacai" src="imagens/copo.jpeg" alt="">
+        </div>
+
+        <div class="produto">
+          <div class="infoproduto">
+            <p class="descricao">Copo 500mL</p>
+            <p class="precoproduto">R$ 15,00</p>
+          </div>
+          <img class="fotoacai" src="imagens/copo.jpeg" alt="">
+        </div>
+      <!-- hamburgueira -->
+        <div class="produto">
+          <div class="infoproduto">
+            <p class="descricao">Hamburgueira 300mL</p>
+            <p class="precoproduto">R$ 10,00</p>
+          </div>
+          <img class="fotoacai" src="imagens/hamburgueira.jpeg" alt="">
+        </div>
+
+        <div class="produto">
+          <div class="infoproduto">
+            <p class="descricao">Hamburgueira 400mL</p>
+            <p class="precoproduto">R$ 12,00</p>
+          </div>
+          <img class="fotoacai" src="imagens/hamburgueira.jpeg" alt="">
+        </div>
+
+        <div class="produto">
+          <div class="infoproduto">
+            <p class="descricao">Hamburgueira 500mL</p>
+            <p class="precoproduto">R$ 15,00</p>
+          </div>
+          <img class="fotoacai" src="imagens/hamburgueira.jpeg" alt="">
+
       </div>
       
       <div id="Sorvetes" class="tabcontent">
-        <h3>Sorvetes</h3>
-        <p>Opções de Sorvetes</p> 
+       <h1>oi</h1>
       </div>
       
       <div id="Snacks" class="tabcontent">
@@ -84,9 +137,8 @@
         <h3>Bebidas</h3>
         <p>Opções de Bebidas</p>
       </div>
-      
-    </main>
     
+    </main>
     
     <script type="text/javascript" src="scripts/tabs.js" ></script>
     <script type="text/javascript" src="scripts/modal.js" ></script>
