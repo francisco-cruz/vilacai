@@ -3,7 +3,11 @@
   <head>
     <title>Cardápio online</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="estilo.css">
+    
+    <link rel="stylesheet" href="styles/estilo.css">
+    <link rel="stylesheet" href="styles/tabs.css">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -18,12 +22,28 @@
         <label id="lbtitulo" for="">Vilaçaí</label>
       </div>
 
-      <!-- <label id="lbestado" for="">Aberto</label> -->
+      <div class="infocontainer">
+        <div class="infolinha1">
+          <label id="lbestado" for="">Aberto</label>
+          <svg xmlns="http://www.w3.org/2000/svg" onclick="action()" id="iconinfo" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+        </div>
+        
+        <div id="divpedidos" >
+          <div> 
+            <p><b>Pedido minímo:</b> R$ 10,00</p>
+            <p><b>Ass: Exeto para o Freitas, <br>pedido minínimo:</b> R$ 25,00</p>
+          </div>
+        </div>
+      </div>
 
-      <img onclick="action()" id="iconinfo"src="imagens/info.svg" alt="">
+      
 
       <div class="modalinfo">
-        <img onclick="close()" id="iconarrow" src="imagens/arrow-left.svg" alt="">
+        <img onclick="closemodal()" id="iconarrow" src="imagens/arrow-left.svg" alt="">
         
         <label id="lbmaisinfo" for="">Mais informações</label>
 
@@ -68,8 +88,8 @@
     </main>
     
     
-    <script type="text/javascript" src="script.js" ></script>
-  
+    <script type="text/javascript" src="scripts/tabs.js" ></script>
+    <script type="text/javascript" src="scripts/modal.js" ></script>
   </body>
   
 </html>

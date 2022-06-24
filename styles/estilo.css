@@ -51,23 +51,41 @@ main {
 
 }
 
-/* #lbestado{
-  margin-left: 24px;
-  margin-top: 100px;
+/* textos pedidos */
+.infocontainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 170px;
+}
+
+.infocontainer .infolinha1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#divpedidos {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+#lbestado{
   color: #03A04C;
   font-size: 16px;
   font-weight: 700;
-} */
+}
 
 
 /* modal de mais informações */
 #iconinfo {
-  position: relative;
-  top: 150px;
-  left: 316px;
-  color: #75228A;
-  cursor: pointer;
+
+ cursor: pointer;
+
+ color: red;
 }
+
 .modalinfo {
   width: 312px;
   height: 255px;
@@ -81,9 +99,6 @@ main {
   display: none;
   animation: animate;
   animation-duration: 800ms;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 /* animação de abertura do modal */
 @keyframes animate {
@@ -127,34 +142,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
-#iconcopy {
+/* #iconcopy {
   
   
-}
-
-
-
-/* tabs de navegação */
-.tab {
-  margin-top: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.tablinks {
-  border: none;
-  background-color: white;
-  color: #DDDDDD;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.tablinks:active {
-  color: rgb(117, 34, 138);
-  font-size: 16px;
-  font-weight: 700;
-  border-bottom: 3px solid #FAE319;
-}
+} */

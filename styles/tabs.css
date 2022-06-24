@@ -1,0 +1,26 @@
+.tab {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }
+  
+  .tab button.tablinks.active {
+    color: rgb(117, 34, 138);
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 3px solid #FAE319;
+  }
+  
+  .tablinks {
+    border: none;
+    background-color: white;
+    color: #DDDDDD;
+    font-size: 16px;
+    font-weight: 700;
+  }
