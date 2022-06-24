@@ -1,4 +1,4 @@
-body{
+body {
   margin: 0;
   display: flex;
   align-items: center;
@@ -11,20 +11,20 @@ main {
   max-width: 426px;
 }
 
-#bgperfil{
+#bgperfil {
   width: 100%;
   max-width: 426px;
   height: 70px;
   background-color: #75228A;
 }
 
-#foto{
+#foto {
   position: absolute;
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
 }
-#bgfoto{
+#bgfoto {
   width: 110px;
   height: 110px;
   border-radius: 100px;
@@ -34,14 +34,14 @@ main {
   background-color: white;
 } 
 
-#fotoperfil{
+#fotoperfil {
   width: 100px;
   height: 100px;
   border-radius: 100px;
 
 }
 
-#lbtitulo{
+#lbtitulo {
   position: absolute;
   top:120px;
   left: 50%;
@@ -60,14 +60,91 @@ main {
 } */
 
 
-.tab{
+/* modal de mais informações */
+#iconinfo {
+  position: relative;
+  top: 150px;
+  left: 316px;
+  color: #75228A;
+  cursor: pointer;
+}
+.modalinfo {
+  width: 312px;
+  height: 255px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0px 0px 5px black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  animation: animate;
+  animation-duration: 800ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* animação de abertura do modal */
+@keyframes animate {
+
+  from{opacity: 1;}
+  from{opacity: 0;}
+}
+
+#lbmaisinfo {
+  color: #75228a;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -24px;
+  margin-bottom: 32px;
+
+  
+}
+#iconarrow {
+  margin-top: 24px;
+  margin-left:24px;
+  color: #1C1C1C;
+  cursor: pointer;
+  display: inline-block;
+
+}
+
+.txtinfo {
+  margin: 0 16px 24px;
+}
+
+#btncopiarlink {
+  border: none;
+  padding: 10px;
+  background-color: rgba(117, 34, 138, 0.7);
+  color: white;
+  font: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#iconcopy {
+  
+  
+}
+
+
+
+/* tabs de navegação */
+.tab {
   margin-top: 200px;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.tablinks{
+.tablinks {
   border: none;
   background-color: white;
   color: #DDDDDD;
@@ -75,8 +152,8 @@ main {
   font-weight: 700;
 }
 
-.tablinks:active{
-  color: #75228A;
+.tablinks:active {
+  color: rgb(117, 34, 138);
   font-size: 16px;
   font-weight: 700;
   border-bottom: 3px solid #FAE319;
