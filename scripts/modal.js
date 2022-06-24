@@ -4,8 +4,7 @@ function action(){
   }
   
   function closemodal(){
-    console.log('entriy');
-
+  
     let modal = document.querySelector('.modalinfo')
     modal.style.display = 'none';
   }

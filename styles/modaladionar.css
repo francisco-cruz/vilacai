@@ -1,0 +1,86 @@
+.modaladicionar {
+    width: 312px;
+    height: 300px;
+    background-color:white;
+    box-shadow: 0px 0px 5px black;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+
+    flex-direction: column;
+    border-radius: 8px;
+}
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#iconclose {
+    margin-right: 16px;
+    color: #1C1C1C;
+}
+.btnadicionar {
+    display: flex;
+    justify-content: space-between;
+   
+}
+.titulomodal {
+    font-size: 16px;
+    font-weight: 700;
+    color:#dddddd;
+    padding-left: 16px;
+}
+
+.infomodal{
+    padding-left: 24px;
+}
+#produtomodal {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1C1C1C;
+}
+
+#precomodal{
+    font-size: 16px;
+    font-weight: 700;
+    color: #1C1C1C;
+}
+#textomodal{
+    font-size:16px ;
+    color: #1C1C1C;
+}
+
+.quantidade {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+
+    border:1px #1C1C1C solid;
+    border-radius: 4px;
+}
+
+#iconmais {
+    padding-right: 8px;
+}
+#iconmenos {
+    padding-left: 8px;
+}
+
+#btnrecheios {
+    background-color: aquamarine;
+    border: none;
+    border-radius: 8px;
+    margin-right: 16px;
+    color: #1C1C1C;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0 16px;
+    background-color:#FAE319 ;
+}

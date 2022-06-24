@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/tabs.css">
     <link rel="stylesheet" href="styles/modalinfo.css">
     <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/modaladionar.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +38,7 @@
         <div id="divpedidos" >
           <div> 
             <p><b>Pedido minímo:</b> R$ 10,00</p>
-            <p><b>Ass: Exeto para o Freitas, <br>pedido minínimo:</b> R$ 25,00</p>
+            <p><b>Obs: Exeto para o Freitas, <br>pedido minínimo:</b> R$ 25,00</p>
           </div>
         </div>
       </div>
@@ -75,7 +76,7 @@
 
       <div id="Acai" class="tabcontent">
       <!-- copo -->
-        <div class="produto">
+        <div onclick="actionmodaladicionar()" class="produto">
           <div class="infoproduto">
             <p class="descricao">Copo 300mL</p>
             <p class="precoproduto">R$ 10,00</p>
@@ -138,10 +139,43 @@
         <p>Opções de Bebidas</p>
       </div>
     
+
+    <div class="modaladicionar">
+      <div class="cabecalho">
+        <p class="titulomodal">Açaí</p>
+        <svg id="iconclose" onclick="closemodaladicionar()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </div>
+      <div class="infomodal">
+        <p id="produtomodal">Copo 300ml</p>
+        <p id="precomodal">R$ 10,00</p>
+        <p id="textomodal">Escolha os seus recheios favoritos em nosso cardápio.</p>
+      </div>
+
+      <div class="btnadicionar">
+        <div class="quantidade">
+          <svg id="iconmais" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          <p>1</p>
+          <svg id="iconmenos" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </div>
+    
+        <button id="btnrecheios">Adionar recheios</button>
+      </div>
+
+    </div>
+
     </main>
     
     <script type="text/javascript" src="scripts/tabs.js" ></script>
     <script type="text/javascript" src="scripts/modal.js" ></script>
+    <script type="text/javascript" src="scripts/modaladicionar.js" ></script>
   </body>
   
 </html>

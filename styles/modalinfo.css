@@ -10,7 +10,7 @@
     transform: translate(-50%,-50%);
     display: none;
     animation: animate;
-    animation-duration: 800ms;
+    animation-duration: 600ms;
   }
   /* animação de abertura do modal */
   @keyframes animate {
