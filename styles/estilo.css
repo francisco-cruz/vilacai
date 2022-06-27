@@ -1,5 +1,5 @@
-/* área do perfil */
-#bgperfil {
+/* cabeçalho */
+#bgPerfil {
   width: 100%;
   max-width: 426px;
   height: 70px;
@@ -12,7 +12,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
-#bgfoto {
+#bgFoto {
   width: 110px;
   height: 110px;
   border-radius: 100px;
@@ -22,7 +22,7 @@
   background-color: white;
 } 
 
-#fotoperfil {
+#fotoPerfil {
   width: 100px;
   height: 100px;
   border-radius: 100px;
@@ -39,15 +39,14 @@
 
 }
 
-
 /* informações */
-.infocontainer {
+.containerInfo {
   display: flex;
   flex-direction: column;
-  margin-top: 170px;
+  margin-top: 150px;
 }
 
-.infocontainer .infolinha1 {
+.containerInfo .info1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,13 +59,20 @@
   padding-left: 24px;
 }
 
-#lbestado{
+
+#lbEstado{
   color: #03A04C;
   font-size: 16px;
   font-weight: 700;
 }
 
-#iconinfo {
+.fechado {
+  color: #D00920;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#iconInfo {
  cursor: pointer;
  color:#75228A;
  padding-right: 24px;

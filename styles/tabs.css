@@ -5,20 +5,14 @@
     justify-content: space-around;
     padding-bottom: 24px;
   }
-  .tabcontent {
+  
+  .conteudo {
     display: none;
     padding: 6px 12px;
     border-top: none;
   }
   
-.tab button.tablinks.active {
-    color: rgb(117, 34, 138);
-    font-size: 16px;
-    font-weight: 700;
-    border-bottom: 3px solid #FAE319;
-  }
-  
-.tablinks {
+.tab button {
     border: none;
     background-color: white;
     color: #DDDDDD;
@@ -26,36 +20,9 @@
     font-weight: 700;
   }
 
-  /* açaí */
-.produto {
-  background-color:#75228A ;
-  height: 90px;
-  margin: 0 24px;
-  border-radius: 8px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 12px;
-}
-
-.infoproduto {
-  padding-left: 24px;
-}
-
-.infoproduto .descricao {
-  color: #DDDDDD;
-}
-
-.infoproduto .precoproduto {
-  color: #FAE319;
-  font-weight: 700;
-  margin-top: -10px;
-}
-.fotoacai {
-    width: 65px;
-    height: 65px;
-    border-radius: 4px;
-    padding-right: 24px;
+  .tab button.ativo {
+    color: rgb(117, 34, 138);
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 3px solid #FAE319;
   }

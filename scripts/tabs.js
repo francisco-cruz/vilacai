@@ -1,26 +1,17 @@
-// foco no tabcontent
-function focotab(){
-  let foco = document.querySelector('#Acai')
-  foco.style.display = 'block'
+document.getElementById('tab-padrao').click();
 
-  let primeiraTab = document.querySelector('.tab .tablinks')
-  primeiraTab.classList.add('active')
-}
+function abrirTab(event, idTab) {
+  let conteudos = document.getElementsByClassName('conteudo');
 
-// script tabs
-function openSession(evt, sessionName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  for (let i = 0; i < conteudos.length; i++){
+    conteudos[i].style.display = 'none';
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(sessionName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 
-// Inicio
-focotab()
+  let tabs = document.getElementsByClassName('tab-button');
+  for (let i = 0; i < tabs.length; i++){
+    tabs[i].className = tabs[i].className.replace('ativo', '');
+  }
+  
+  document.getElementById(idTab).style.display = 'block';
+  event.currentTarget.className += ' ativo';
+}
