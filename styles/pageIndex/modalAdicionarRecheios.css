@@ -88,6 +88,9 @@
     cursor: pointer;
 }
 #btnAdicionarRecheios {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
     touch-action: manipulation;
     border: none;
     border-radius: 8px;

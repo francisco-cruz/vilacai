@@ -17,7 +17,7 @@ let qtdReal = parseInt(qtd2)
 
   function diminuirQuantidade(){    
     if(qtdReal === 1){
-      document.querySelector('#iconAddMenos').remove(onclick);
+      document.querySelector('#iconAddMenos').off('click');
     }else {
       qtdReal -=1;
       document.querySelector("#qtd").innerText= qtdReal;
@@ -28,7 +28,7 @@ let qtdReal = parseInt(qtd2)
 
   function aumentarQuantidade(){
     if(qtdReal === 10){
-      document.querySelector('#iconAddMais').remove(onclick);
+      document.querySelector('#iconAddMais').off('click');
     }else {
       qtdReal +=1;
       document.querySelector("#qtd").innerText= qtdReal;
