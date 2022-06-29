@@ -22,6 +22,8 @@
     font-weight: 700;
 }
 
+
+
 /* 
 #opCremoso {} 
 
@@ -65,12 +67,14 @@
     color: white;
     width: 18px;
     height: 18px;
+    cursor: pointer;
 }
 
 #iconAddMenos {
     color: white;
     width: 18x;
     height: 18px;
+    cursor: pointer;
 }
 #qtd {
     color: white;
