@@ -73,6 +73,7 @@
 }
 
 #iconInfo {
+  touch-action: manipulation;
  cursor: pointer;
  color:#75228A;
  padding-right: 24px;

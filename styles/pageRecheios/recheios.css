@@ -1,9 +1,77 @@
-adicionarTipoacai{
-    background-color: aqua;
+.adicionarRecheios{
+
+  margin-bottom:24px ;
 }
 
-.opcoes { 
-    width: 100%;
-    max-width: 426px;
-    background-color: aqua;
+
+.txtTipoRecheio {
+    font-size: 16px;
+    margin: 0;
+  
+    font-weight: 700;
+    
+}
+
+.opcoesAcai {
+    background-color: #75228A;
+   
+}
+
+.opcoesAcai label {
+    color: white;
+    font-weight: 700;
+}
+
+/* 
+#opCremoso {} 
+
+#opTradicional { }
+
+*/
+
+.contadorAcai {
+    font-size: 16px;
+    font-weight: 700;
+    color: #dddddd;
+
+}
+
+.txtNomeRecheio {
+    background-color:a ;
+    font-size: 16px;
+    color: white;
+    font-weight: 700;
+    margin-left: 24px
+
+}
+.itemsRecheios {
+    background-color: #75228A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12pxpx;
+}
+.qtdRecheios {
+    width: 85px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 24px;
+    
+}
+
+#iconAddMais {
+    color: white;
+    width: 18px;
+    height: 18px;
+}
+
+#iconAddMenos {
+    color: white;
+    width: 18x;
+    height: 18px;
+}
+#qtd {
+    color: white;
 }

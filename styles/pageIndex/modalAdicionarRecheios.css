@@ -63,7 +63,7 @@
     color: #1C1C1C;
 }
 
-.quantidade {
+.qtdModalAdicionar {
     width: 100px;
     height: 48px;
     display: flex;
@@ -88,6 +88,7 @@
     cursor: pointer;
 }
 #btnAdicionarRecheios {
+    touch-action: manipulation;
     border: none;
     border-radius: 8px;
     margin-right: 16px;
