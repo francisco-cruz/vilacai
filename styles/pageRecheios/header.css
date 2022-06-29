@@ -22,6 +22,8 @@ header {
     font-weight: 700;
 }
 #iconArrow{
+    touch-action: manipulation;
+    cursor: pointer;
     padding-left: 24px;
     color: #1c1c1c;
 }

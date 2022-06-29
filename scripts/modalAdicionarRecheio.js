@@ -1,4 +1,5 @@
 function abrirModalAdicionar(){
+
     let modal = document.querySelector('.modaladicionar')
     modal.style.display = 'block';
   }
@@ -9,16 +10,28 @@ function abrirModalAdicionar(){
   }
 
 // eventos do botão quantidade
-let somarNumero = document.querySelectorId('iconAddMais');
-somarNumero.addEventListener("click", diminuirQuantidade);
 
-let subtracaoNumero = document.querySelectorId('iconAddMenos');
-subtracaoNumero.addEventListener("click", aumentarQuantidade);
+let qtd2 = document.querySelector('#qtd').innerHTML;
+let qtdReal = parseInt(qtd2)
 
-  function diminuirQuantidade(){
-    console.log('-1');
+
+  function diminuirQuantidade(){    
+    if(qtdReal === 1){
+      document.querySelector('#iconAddMenos').remove(onclick);
+    }else {
+      qtdReal -=1;
+      document.querySelector("#qtd").innerText= qtdReal;
+}  
+
+
   }
+
   function aumentarQuantidade(){
-    console.log('+1');
+    if(qtdReal === 10){
+      document.querySelector('#iconAddMais').remove(onclick);
+    }else {
+      qtdReal +=1;
+      document.querySelector("#qtd").innerText= qtdReal;
+}
   
   }
