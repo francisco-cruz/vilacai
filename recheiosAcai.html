@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    
     <link rel="stylesheet" href="styles/pageRecheios/recheios.css">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/pageRecheios/header.css">
     <link rel="stylesheet" href="styles/pageRecheios/sugestao.css">
+
+    <meta name="theme-color" content="#75228A">
 
     <title>Vilaçai</title>
 </head>
@@ -25,7 +28,7 @@
                         <polyline points="12 19 5 12 12 5"></polyline>
                     </svg>
                 </a>
-                <p class="produtoInfo">Copo 300mL</p>
+                <p class="produtoInfo"></p>
             </div>
             <p>Escolha seus recheios favoritos</p>
         </header>
@@ -46,7 +49,7 @@
                 <input class="input-radio" type="radio" id="opTradicional" name="fav_language" value="HTML">
                 <label for="Tradicional">
                     <div class="radio-btn" ></div>
-                    <span>Tradicional</span>
+                    <span>Cremoso</span>
                 </label>
 
             </div>
@@ -54,12 +57,12 @@
 
         <div class="adicionarRecheios">
             <div>
-                <p class="txtTipoRecheio">Frutas</p>
-                <p class="contadorAcai">0 de 5</p>
+                <p class="txtTipoRecheio">Recheios</p>
+                <p class="contadorAcai">0 de 10</p>
             </div>
 
             <div class="itemsRecheios">
-                <p class="txtNomeRecheio">Morango</p>
+                <p class="txtNomeRecheio">Disquete</p>
 
                 <div class="qtdRecheios">
                     <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -78,7 +81,342 @@
             </div>
 
             <div class="itemsRecheios">
-                <p class="txtNomeRecheio">Banana</p>
+                <p class="txtNomeRecheio">Choco Power</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Choco Ball</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Gotas de Chocolate</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Granulado Colorido</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Amendoin Torrado</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Castanha Granulada</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Granola</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Paçoquinha</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Flocos de Arroz</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Farinha Lácta</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Leite em Pó</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Leite Condensado</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Creme de Avelã</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Creme de Óreo</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Pasta de Amendoin</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Calda Zerada, Chocolate Trad.</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Calda Zerada, Chocolate Branco</p>
+
+                <div class="qtdRecheios">
+                    <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <p id="qtd">1</p>
+                    <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+        <div class="adicionarRecheios">
+            <div>
+                <p class="txtTipoRecheio">Frutas</p>
+                <p class="contadorAcai">0 de 5</p>
+            </div>
+
+            <div class="itemsRecheios">
+                <p class="txtNomeRecheio">Morango</p>
 
                 <div class="qtdRecheios">
                     <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -116,7 +454,7 @@
             </div>
 
             <div class="itemsRecheios">
-                <p class="txtNomeRecheio">Manga</p>
+                <p class="txtNomeRecheio">Banana</p>
 
                 <div class="qtdRecheios">
                     <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -135,7 +473,7 @@
             </div>
 
             <div class="itemsRecheios">
-                <p class="txtNomeRecheio">Melancia</p>
+                <p class="txtNomeRecheio">Uva</p>
 
                 <div class="qtdRecheios">
                     <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
@@ -153,8 +491,6 @@
                 </div>
             </div>
 
-
-
         </div>
         <div class="sugestao">
             <div class="sugestaoLabel">
@@ -170,7 +506,7 @@
         <button class="btnAvancar" type="submit">Avançar</button>
 
     </main>
-
+  
 </body>
 
 </html>
