@@ -1,3 +1,4 @@
+// pegando horário e fazenedo condição
 function pegarHora(){
     const date = new Date().toLocaleTimeString();
 
@@ -11,5 +12,5 @@ function pegarHora(){
         let estado = document.querySelectorById("lbEstado").innerText="Aberto";
     }
 }
-pegarHora()
+pegarHora();
 

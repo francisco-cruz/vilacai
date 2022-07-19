@@ -2,7 +2,6 @@
   margin-bottom:24px ;
 }
 
-
 .txtTipoRecheio {
     font-size: 16px;
     margin: 0;
@@ -12,8 +11,19 @@
 
 .opcoesAcai {
     background-color: #75228A;
-   
 }
+
+.opcoesSorvete {
+    background-color: #11A857;
+}  
+
+.opcoesSorvete span {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    
+}
+
 .input-radio {
     position: absolute;
     opacity: 0;
@@ -80,6 +90,13 @@ input [type="radio"]:checked + label .radio-btn {
 }
 .itemsRecheios {
     background-color: #75228A;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12pxpx;
+}
+.itemsSorvete {
+    background-color: #11A857;
     display: flex;
     align-items: center;
     justify-content: space-between;
