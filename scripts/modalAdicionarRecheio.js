@@ -50,7 +50,7 @@ let quantidadeReal = parseInt(quantidade)
     // diminuir quantidade
 function diminuirQuantidade() {
   if (quantidadeReal === 1) {
-    document.querySelector('#iconAddMenos').off('click');
+    document.querySelector('.iconAddMenos').off('click');
   } else {
     quantidadeReal -= 1;
     document.querySelector("#qtd").innerText = quantidadeReal;
@@ -60,7 +60,7 @@ function diminuirQuantidade() {
 function aumentarQuantidade() {
   console.log(quantidadeReal);
   if (quantidadeReal=== 10) {
-    document.querySelector('#iconAddMais').off('click');
+    document.querySelector('.iconAddMais').off('click');
   } else {
     quantidadeReal += 1;
     document.querySelector("#qtd").innerText = quantidadeReal;
