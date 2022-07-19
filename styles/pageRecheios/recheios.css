@@ -43,36 +43,9 @@
     margin-bottom: 10px;
 }
 
-.radio-btn {
-    height: 20px;
-    width: 20px;
-   
-    border: 2px solid #FAE319;
-    display: block;
-    margin: 1rem;
-}
-
-input [type="radio"] + label {
-    color: #FAE319;
+/* .header-section {
     
-}
-
-input [type="radio"]:checked + label span {
-    color: aqua;
-}
-input [type="radio"]:checked + label .radio-btn {
-    background-color: bisque;
-}
-
-
-
-/* 
-#opCremoso {} 
-
-#opTradicional { }
-
-*/
-
+} */
 .contadorAcai {
     font-size: 16px;
     font-weight: 700;
