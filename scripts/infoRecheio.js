@@ -12,33 +12,34 @@ function pegarInfoRecheio(produto) {
     let qtdTotal = document.querySelector('.qtd-total-recheio');
     qtdTotal.innerText = quantidade; 
 
-
-    
-    let qtdSoma = document.querySelector('.contador-recheio');
-    qtdSoma.innerText = quantidade; 
-
   }
   quantidadeRecheio();
-
-
-  let quantidade = document.querySelector('#contador-recheio').innerHTML;
-  let quantidadeReal = parseInt(quantidade)
-
+// pegando elemnto
+  let quantidadeDeRecheio = document.querySelector('.contador-recheio').innerHTML;
+  let quantidadeReal = parseInt(quantidadeDeRecheio);
+//pegando botão
+  let quantidadeBotao = document.querySelector('#qtd').innerHTML;
+  let quantidadeRealBotao = parseInt(quantidadeBotao);
     // diminuir quantidade
 function diminuirQuantidade() {
-  if (quantidadeReal === 1) {
+  if ( quantidadeReal === 1 || quantidadeBotao == 1) {
     document.querySelector('#iconAddMenos').off('click');
+    
   } else {
+    quantidadeRealBotao -= 1;
+    document.querySelector("#qtd").innerText = quantidadeRealBotao;
     quantidadeReal -= 1;
-    document.querySelector("#qtd").innerText = quantidadeReal;
+    document.querySelector(".contador-recheio").innerText = quantidadeReal;
   }
 }
     // aumentar quatidade
 function aumentarQuantidade() {
-  if (quantidadeReal=== 10) {
+  if ( quantidadeReal=== 8) {
     document.querySelector('#iconAddMais').off('click');
   } else {
+    quantidadeRealBotao += 1;
+    document.querySelector("#qtd").innerText = quantidadeRealBotao;
     quantidadeReal += 1;
-    document.querySelector("#qtd").innerText = quantidadeReal;
+    document.querySelector(".contador-recheio").innerText = quantidadeReal;
   }
 }
