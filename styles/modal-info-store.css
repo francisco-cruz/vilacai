@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -33,7 +33,7 @@
 
 }
 
-.text-info {
+.text-info-modal {
     margin-top: 4px;
     font-weight: 600;
     color: #808080;
@@ -57,12 +57,13 @@
 #closed-modal {
     margin-top: 24px;
     margin-right: 24px;
+    cursor: pointer;
 }
 
 .btn-copy {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    
     color: #A6A6A6;
     border-radius: 8px;
     cursor: pointer;
@@ -71,5 +72,4 @@
 .btn-copy p{
     margin-left: 24px;
     font-weight: 600;
-    
 }

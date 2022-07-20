@@ -1,6 +1,7 @@
 @import 'header.css';
 @import 'tab.css';
 @import 'modal-info-store.css';
+@import 'modal-recheio.css';
 
 * {
   margin: 0;
