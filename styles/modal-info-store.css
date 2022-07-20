@@ -1,0 +1,75 @@
+.bg-modal-store {
+    background-color: rgba(0, 0, 0, .3);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-store {
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.info-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 32px;
+}
+.info-operation {
+    display: flex;
+
+}
+
+.text-info {
+    margin-top: 4px;
+    font-weight: 600;
+    color: #808080;
+}
+
+.info-adress {
+    display: flex;
+    margin-top: 24px;
+}
+
+.title-modal-store {
+    font-weight: 600;
+    color: #A6A6A6 ;
+}
+
+.icon-modal-store {
+    margin-right: 24px;
+    color: #A6A6A6;
+}
+
+#closed-modal {
+    margin-top: 24px;
+    margin-right: 24px;
+}
+
+.btn-copy {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #A6A6A6;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 24px;
+}
+.btn-copy p{
+    margin-left: 24px;
+    font-weight: 600;
+    
+}
