@@ -2,10 +2,16 @@
 <html lang="pt-br">
 
 <head>
+  <!-- titulo da página -->
   <title>Cardápio online</title>
+  <!-- meta -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial=scale-1">
-
+  <!-- favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./imagens/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./imagens/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./imagens/favicons/favicon-16x16.png">
+  <!-- estilos -->
   <link rel="stylesheet" href="./styles/global.css">
 </head>
 
@@ -21,7 +27,8 @@
         <div>
           <h1>Vilaçaí</h1>
           <p id="open">Aberto</p>
-          <p id="text-min-pedido">Pedido mínimo: <b>R$ 12,00</b><br>Obs: Exeto para o Freitas, pedido mínimo: <b>R$ 25,00</b></p>
+          <p id="text-min-pedido">Pedido mínimo: <b>R$ 12,00</b><br>Obs: Exeto para o Freitas, pedido mínimo: <b>R$
+              25,00</b></p>
         </div>
         <div class="div-info-store">
           <div class="info-store">
@@ -36,23 +43,22 @@
           </div>
         </div>
       </div>
-
     </header>
-
     <!--tabs -->
     <div class="tab">
       <hr>
-      <button id="tab-default" class="tab-button" onclick="openTab(event, 'acai')">Açai</button>
-      <button class="tab-button" onclick="openTab(event, 'ice-cream')">Sorteves</button>
+      <button id="tab-default" class="tab-button" onclick="openTab(event, 'acai')">Açaí</button>
+      <button class="tab-button" onclick="openTab(event, 'ice-cream')">Sorvetes</button>
       <button class="tab-button" onclick="openTab(event, 'snacks')">Snacks</button>
       <button class="tab-button" onclick="openTab(event, 'drinks')">Bebidas</button>
     </div>
     <!-- conteudo das tabs -->
+    <!-- acai -->
     <section id="acai" class="products-section">
       <!-- titulo da seção -->
       <div class="title">
         <h2>Açai</h2>
-        <p>12 opções</p>
+        <p>6 opções</p>
       </div>
       <!-- seção -->
       <div class="products">
@@ -65,16 +71,16 @@
             <p class="price-product">R$ 12,00</p>
           </div>
         </div>
-          <!-- produto -->
-          <div class="product">
-            <img src="./imagens/copo.jpeg" alt="">
-            <div class="info-product">
-              <p class="name-product">Copo 400ml</p>
-              <p class="obs-product">Até 10 adicionais</p>
-              <p class="price-product">R$ 14,00</p>
-            </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/copo.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">Copo 400ml</p>
+            <p class="obs-product">Até 10 adicionais</p>
+            <p class="price-product">R$ 14,00</p>
           </div>
-            <!-- produto -->
+        </div>
+        <!-- produto -->
         <div class="product">
           <img src="./imagens/copo.jpeg" alt="">
           <div class="info-product">
@@ -83,16 +89,16 @@
             <p class="price-product">R$ 18,00</p>
           </div>
         </div>
-           <!-- produto -->
-           <div class="product">
-            <img src="./imagens/copo.jpeg" alt="">
-            <div class="info-product">
-              <p class="name-product">Copo 700ml</p>
-              <p class="obs-product">Até 14 adicionais</p>
-              <p class="price-product">R$ 25,00</p>
-            </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/copo.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">Copo 700ml</p>
+            <p class="obs-product">Até 14 adicionais</p>
+            <p class="price-product">R$ 25,00</p>
           </div>
-             <!-- produto -->
+        </div>
+        <!-- produto -->
         <div class="product">
           <img src="./imagens/copo.jpeg" alt="">
           <div class="info-product">
@@ -101,170 +107,177 @@
             <p class="price-product">R$ 12,00</p>
           </div>
         </div>
-           <!-- produto -->
-           <div class="product">
-            <img src="./imagens/copo.jpeg" alt="">
-            <div class="info-product">
-              <p class="name-product">Barca pequena</p>
-              <p class="obs-product">Adicionais à vontade</p>
-              <p class="price-product">R$ 50,00</p>
-            </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/copo.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">Barca pequena</p>
+            <p class="obs-product">Adicionais à vontade</p>
+            <p class="price-product">R$ 50,00</p>
           </div>
-
-
-      </div>
-    </section>
-    
-    <section id="ice-cream" class="products-section">
-      <div class="products">
-
-        <!-- produto -->
-        <div class="product">
-         <img src="./imagens/hamburgueira.jpeg" alt="">
-         <div class="info-product">
-           <p class="name-product">Copo 300ml</p>
-           <p class="obs-product">Até 8 adicionais</p>
-           <p class="price-product">R$ 12,00</p>
-         </div>
-       </div>
-         <!-- produto -->
-         <div class="product">
-           <img src="./imagens/hamburgueira.jpeg" alt="">
-           <div class="info-product">
-             <p class="name-product">Copo 400ml</p>
-             <p class="obs-product">Até 10 adicionais</p>
-             <p class="price-product">R$ 14,00</p>
-           </div>
-         </div>
-           <!-- produto -->
-       <div class="product">
-         <img src="./imagens/hamburgueira.jpeg" alt="">
-         <div class="info-product">
-           <p class="name-product">Copo 500ml</p>
-           <p class="obs-product">Até 12 adicionais</p>
-           <p class="price-product">R$ 18,00</p>
-         </div>
-       </div>
-          <!-- produto -->
-          <div class="product">
-           <img src="./imagens/hamburgueira.jpeg" alt="">
-           <div class="info-product">
-             <p class="name-product">Copo 700ml</p>
-             <p class="obs-product">Até 14 adicionais</p>
-             <p class="price-product">R$ 25,00</p>
-           </div>
-         </div>
-            <!-- produto -->
-       <div class="product">
-         <img src="./imagens/hamburgueira.jpeg" alt="">
-         <div class="info-product">
-           <p class="name-product">1Kg</p>
-           <p class="obs-product">Adicionais à vontade</p>
-           <p class="price-product">R$ 12,00</p>
-         </div>
-       </div>
-       <!-- produto -->
-       <div class="product">
-         <img src="./imagens/hamburgueira.jpeg" alt="">
-         <div class="info-product">
-           <p class="name-product">1Kg</p>
-           <p class="obs-product">Adicionais à vontade</p>
-           <p class="price-product">R$ 12,00</p>
-         </div>
-       </div>
-       <div class="title">
-         <h2></h2>
-         <span></span>
-       </div>
-      </div>
-    </section>
-
-    <section id="snacks" class="products-section">
-      <div class="products">
-        <!-- produto -->
-        <div class="product">
-         <img src="./imagens/snacks.png" alt="">
-         <div class="info-product">
-           <p class="name-product">Pipoca Boku</p>
-           <p class="obs-product">Sabor galinha</p>
-           <p class="price-product">R$ 5,00</p>
-         </div>
-       </div>
-         <!-- produto -->
-         <div class="product">
-           <img src="./imagens/snacks.png" alt="">
-           <div class="info-product">
-             <p class="name-product">Pipoca Boku</p>
-             <p class="obs-product">Sabor galinha</p>
-             <p class="price-product">R$ 5,00</p>
-           </div>
-         </div>
-           <!-- produto -->
-       <div class="product">
-         <img src="./imagens/snacks.png" alt="">
-         <div class="info-product">
-           <p class="name-product">Pipoca Boku</p>
-           <p class="obs-product">Sabor galinha</p>
-           <p class="price-product">R$ 5,00</p>
-         </div>
-       </div>
-       <div class="title">
-         <h2></h2>
-         <span></span>
-       </div>
-           <!-- produto -->
-           <div class="product">
-             <img src="./imagens/snacks.png" alt="">
-             <div class="info-product">
-               <p class="name-product">Pipoca Boku</p>
-               <p class="obs-product">Sabor galinha</p>
-               <p class="price-product">R$ 5,00</p>
-             </div>
-           </div>
-           <div class="title">
-             <h2></h2>
-             <span></span>
-           </div>
-               <!-- produto -->
-       <div class="product">
-         <img src="./imagens/snacks.png" alt="">
-         <div class="info-product">
-           <p class="name-product">Pipoca Boku</p>
-           <p class="obs-product">Sabor galinha</p>
-           <p class="price-product">R$ 5,00</p>
-         </div>
-       </div>
-       <div class="title">
-         <h2></h2>
-         <span></span>
-       </div>
-           <!-- produto -->
-           <div class="product">
-             <img src="./imagens/snacks.png" alt="">
-             <div class="info-product">
-               <p class="name-product">Pipoca Boku</p>
-               <p class="obs-product">Sabor galinha</p>
-               <p class="price-product">R$ 5,00</p>
-             </div>
-           </div>
-           <div class="title">
-             <h2></h2>
-             <span></span>
-           </div>
-      </div>
-    </section>
-
-    <section id="drinks" class="products-section">
-    <div class="products">
-      <!-- produto -->
-      <div class="product">
-        <img src="./imagens/coca.jpg" alt="">
-        <div class="info-product">
-          <p class="name-product">Coca-Cola 250ml</p>
-          <p class="obs-product">Latinha</p>
-          <p class="price-product">R$ 5,00</p>
         </div>
       </div>
+    </section>
+    <!-- ice-cream -->
+    <section id="ice-cream" class="products-section">
+      <!-- titulo da seção -->
+      <div class="title">
+        <h2>Sorvetes</h2>
+        <p>6 opções</p>
+      </div>
+      <!-- seção -->
+      <div class="products">
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/hamburgueira.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">Copo 300ml</p>
+            <p class="obs-product">Até 8 adicionais</p>
+            <p class="price-product">R$ 12,00</p>
+          </div>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/hamburgueira.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">Copo 400ml</p>
+            <p class="obs-product">Até 10 adicionais</p>
+            <p class="price-product">R$ 14,00</p>
+          </div>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/hamburgueira.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">Copo 500ml</p>
+            <p class="obs-product">Até 12 adicionais</p>
+            <p class="price-product">R$ 18,00</p>
+          </div>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/hamburgueira.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">Copo 700ml</p>
+            <p class="obs-product">Até 14 adicionais</p>
+            <p class="price-product">R$ 25,00</p>
+          </div>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/hamburgueira.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">1Kg</p>
+            <p class="obs-product">Adicionais à vontade</p>
+            <p class="price-product">R$ 12,00</p>
+          </div>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/hamburgueira.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">1Kg</p>
+            <p class="obs-product">Adicionais à vontade</p>
+            <p class="price-product">R$ 12,00</p>
+          </div>
+        </div>
+        <div class="title">
+          <h2></h2>
+          <span></span>
+        </div>
+      </div>
+    </section>
+    <!-- snacks -->
+    <section id="snacks" class="products-section">
+      <!-- titulo da seção -->
+      <div class="title">
+        <h2>Snacks</h2>
+        <p>6 opções</p>
+      </div>
+      <!-- seção -->
+      <div class="products">
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/snacks.png" alt="">
+          <div class="info-product">
+            <p class="name-product">Pipoca Boku</p>
+            <p class="obs-product">Sabor galinha</p>
+            <p class="price-product">R$ 5,00</p>
+          </div>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/snacks.png" alt="">
+          <div class="info-product">
+            <p class="name-product">Pipoca Boku</p>
+            <p class="obs-product">Sabor galinha</p>
+            <p class="price-product">R$ 5,00</p>
+          </div>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/snacks.png" alt="">
+          <div class="info-product">
+            <p class="name-product">Pipoca Boku</p>
+            <p class="obs-product">Sabor galinha</p>
+            <p class="price-product">R$ 5,00</p>
+          </div>
+        </div>
+        <div class="title">
+          <h2></h2>
+          <span></span>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/snacks.png" alt="">
+          <div class="info-product">
+            <p class="name-product">Pipoca Boku</p>
+            <p class="obs-product">Sabor galinha</p>
+            <p class="price-product">R$ 5,00</p>
+          </div>
+        </div>
+        <div class="title">
+          <h2></h2>
+          <span></span>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/snacks.png" alt="">
+          <div class="info-product">
+            <p class="name-product">Pipoca Boku</p>
+            <p class="obs-product">Sabor galinha</p>
+            <p class="price-product">R$ 5,00</p>
+          </div>
+        </div>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/snacks.png" alt="">
+          <div class="info-product">
+            <p class="name-product">Pipoca Boku</p>
+            <p class="obs-product">Sabor galinha</p>
+            <p class="price-product">R$ 5,00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- drinks -->
+    <section id="drinks" class="products-section">
+      <!-- titulo da seção -->
+      <div class="title">
+        <h2>Bebidas</h2>
+        <p>3 opções</p>
+      </div>
+      <!-- seção -->
+      <div class="products">
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/coca.jpg" alt="">
+          <div class="info-product">
+            <p class="name-product">Coca-Cola 250ml</p>
+            <p class="obs-product">Latinha</p>
+            <p class="price-product">R$ 5,00</p>
+          </div>
+        </div>
         <!-- produto -->
         <div class="product">
           <img src="./imagens/coca.jpg" alt="">
@@ -274,20 +287,18 @@
             <p class="price-product">R$ 10,00</p>
           </div>
         </div>
-          <!-- produto -->
-      <div class="product">
-        <img src="./imagens/coca.jpg" alt="">
-        <div class="info-product">
-          <p class="name-product">Coca-Cola 2L</p>
-          <p class="obs-product">Para viagem</p>
-          <p class="price-product">R$ 12,00</p>
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/coca.jpg" alt="">
+          <div class="info-product">
+            <p class="name-product">Coca-Cola 2L</p>
+            <p class="obs-product">Para viagem</p>
+            <p class="price-product">R$ 12,00</p>
+          </div>
         </div>
-    </div>
-
     </section>
     </div>
   </main>
-
 
   <!-- scripts -->
   <script type="text/javascript" src="scripts/tabs.js"></script>
