@@ -1,17 +1,17 @@
-document.getElementById('tab-padrao').click();
+function openTab(event, idTab) {
+  let section = document.getElementsByClassName('products-section');
 
-function abrirTab(event, idTab) {
-  let conteudos = document.getElementsByClassName('conteudo');
-
-  for (let i = 0; i < conteudos.length; i++){
-    conteudos[i].style.display = 'none';
+  for (let i = 0; i < section.length; i++){
+    section[i].style.display = 'none';
   }
 
   let tabs = document.getElementsByClassName('tab-button');
   for (let i = 0; i < tabs.length; i++){
-    tabs[i].className = tabs[i].className.replace('ativo', '');
+    tabs[i].className = tabs[i].className.replace('active', '');
   }
   
   document.getElementById(idTab).style.display = 'block';
-  event.currentTarget.className += ' ativo';
+  event.currentTarget.className += ' active';
 }
+
+document.getElementById('tab-default').click();

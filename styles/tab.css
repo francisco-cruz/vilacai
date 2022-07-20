@@ -1,0 +1,91 @@
+.tab {
+    margin-top: 24px;
+}
+
+.tab hr {
+    border-width: 1px;
+    margin-bottom: 16px;
+}
+
+.tab-button {
+    font-size: 20px;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    color: #A6A6A6;
+
+    padding: 0 16px;
+    margin: 0 2px;
+    transition: color .3s;
+}
+/* conteudo da seção */
+.title {
+    margin-left: 16px;
+    margin-top: 24px;
+}
+
+.title p{
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 12px;
+}
+.active {
+    color: #1C1C1C;
+    border-bottom: 2px solid #1C1C1C;
+   
+}
+
+.products {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1366px;
+    flex-wrap: wrap;
+}
+
+.product {
+    margin-top: 24px;
+    width: 420px;
+    height: 380px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px #F2F2F2 solid;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.product:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.09);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.09);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.09);
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.info-product {
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.name-product {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.obs-product {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+.price-product {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 48px;
+}

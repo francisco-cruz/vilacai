@@ -6,217 +6,292 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial=scale-1">
 
-  <link rel="stylesheet" href="styles/pageIndex/estilo.css">
-  <link rel="stylesheet" href="styles/pageIndex/tabs.css">
-  <link rel="stylesheet" href="styles/pageIndex/modalMaisInformacoes.css">
-  <link rel="stylesheet" href="styles/global.css">
-  <link rel="stylesheet" href="styles/pageIndex/modalAdicionarRecheios.css">
-  <link rel="stylesheet" href="styles/pageIndex/conteudoTabs.css">
-
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/global.css">
 </head>
 
 <body>
   <main>
     <!-- cabeçalho -->
-    <div id="bgPerfil"></div>
-    <div id="foto">
-      <div id="bgFoto"><img id="fotoPerfil" src="imagens/fotoperfil.jpeg" alt=""></div>
-      <label id="lbtitulo" for="">Vilaçaí</label>
-    </div>
-    <div class="containerInfo">
-      <div class="info1">
-        <label id="lbEstado" for="">Aberto</label>
-        <svg xmlns="http://www.w3.org/2000/svg" onclick="abrirModal()" id="iconInfo" width="24" height="24"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" class="feather feather-info">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
-        </svg>
-      </div>
-      <div id="divpedidos">
+    <header class="header">
+      <!-- background e foto do perfil -->
+      <div class="perfil-bg">
+        <img src="./imagens/ice-cream.jpg" alt="plano de fundo" id="background-img">
+        <img src="./imagens/foto-perfil.jpeg" alt="foto do perfil" id="perfil-img"></div>
+      <div class="text-info">
         <div>
-          <p><b>Pedido minímo:</b> R$ 12,00</p>
-          <p><b>Obs: Exeto para o Freitas, <br>pedido minínimo:</b> R$ 25,00</p>
+          <h1>Vilaçaí</h1>
+          <p id="open">Aberto</p>
+          <p id="text-min-pedido">Pedido mínimo: <b>R$ 12,00</b><br>Obs: Exeto para o Freitas, pedido mínimo: <b>R$ 25,00</b></p>
+        </div>
+        <div class="div-info-store">
+          <div class="info-store">
+            <p id="link-info-store">Informações da loja</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-info">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- modal mais informações -->
-    <div class="modalMaisInformacoes">
-      <img onclick="fecharModal()" id="iconArrow" src="imagens/icones/arrow-left.svg" alt="">
 
-      <label id="lbMaisInformacoes" for="">Mais informações</label>
+    </header>
 
-      <p class="txtInfo" for=""><b>Horário de funcionamento:</b> De 18h ás 22h e fechado ás Terças.</p>
-      <p class="txtInfo" for=""><b>Endereço:</b> Vila Santa Izabel , Rua Newman Queiroz, 20.</p>
-
-      <button onclick=" copyToClipBoard()" id="btnCopiarLink">
-        <p id="textURL"> </p>
-        <svg id="iconCopy" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="feather feather-copy">
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-        </svg>
-        Copiar link
-      </button>
-    </div>
-
-    <!--  botões das tabs -->
+    <!--tabs -->
     <div class="tab">
-      <button id="tab-padrao" class="tab-button" onclick="abrirTab(event, 'acai')">Açai</button>
-      <button class="tab-button" onclick="abrirTab(event, 'sorvetes')">Sorteves</button>
-      <button class="tab-button" onclick="abrirTab(event, 'snacks')">Snacks</button>
-      <button class="tab-button" onclick="abrirTab(event, 'bebidas')">Bebidas</button>
+      <hr>
+      <button id="tab-default" class="tab-button" onclick="openTab(event, 'acai')">Açai</button>
+      <button class="tab-button" onclick="openTab(event, 'ice-cream')">Sorteves</button>
+      <button class="tab-button" onclick="openTab(event, 'snacks')">Snacks</button>
+      <button class="tab-button" onclick="openTab(event, 'drinks')">Bebidas</button>
     </div>
-
     <!-- conteudo das tabs -->
-    <div id="acai" class="conteudo">
-      <!-- hamburgueira -->
-      <div class="produto" data-qtd-recheio="8" data-secao="Açai" data-nome="300ml" data-preco="12,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">300ml: Até 8 Adicionais</p>
-          <p id="txtPreco">R$ 12,00</p>
-        </div>
-        <img class="fotoProduto" src="imagens/hamburgueira.jpeg" alt="">
+    <section id="acai" class="products-section">
+      <!-- titulo da seção -->
+      <div class="title">
+        <h2>Açai</h2>
+        <p>12 opções</p>
       </div>
-
-      <div class="produto" data-qtd-recheio="10" data-secao="Açai" data-nome="400ml" data-preco="14,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">400ml: Até 10 Adicionais</p>
-          <p id="txtPreco">R$ 14,00</p>
+      <!-- seção -->
+      <div class="products">
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/copo.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">Copo 300ml</p>
+            <p class="obs-product">Até 8 adicionais</p>
+            <p class="price-product">R$ 12,00</p>
+          </div>
         </div>
-        <img class="fotoProduto" src="imagens/hamburgueira.jpeg" alt="">
-      </div>
-
-      <div class="produto" data-secao="Açai" data-nome="500ml" data-preco="18,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">500ml: Até 12 Adicionais</p>
-          <p id="txtPreco">R$ 18,00</p>
+          <!-- produto -->
+          <div class="product">
+            <img src="./imagens/copo.jpeg" alt="">
+            <div class="info-product">
+              <p class="name-product">Copo 400ml</p>
+              <p class="obs-product">Até 10 adicionais</p>
+              <p class="price-product">R$ 14,00</p>
+            </div>
+          </div>
+            <!-- produto -->
+        <div class="product">
+          <img src="./imagens/copo.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">Copo 500ml</p>
+            <p class="obs-product">Até 12 adicionais</p>
+            <p class="price-product">R$ 18,00</p>
+          </div>
         </div>
-        <img class="fotoProduto" src="imagens/hamburgueira.jpeg" alt="">
-      </div>
-
-      <div class="produto" data-secao="Açai" data-nome="700ml" data-preco="25,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">700ml: Até 14 Adicionais</p>
-          <p id="txtPreco">R$ 25,00</p>
+           <!-- produto -->
+           <div class="product">
+            <img src="./imagens/copo.jpeg" alt="">
+            <div class="info-product">
+              <p class="name-product">Copo 700ml</p>
+              <p class="obs-product">Até 14 adicionais</p>
+              <p class="price-product">R$ 25,00</p>
+            </div>
+          </div>
+             <!-- produto -->
+        <div class="product">
+          <img src="./imagens/copo.jpeg" alt="">
+          <div class="info-product">
+            <p class="name-product">1Kg</p>
+            <p class="obs-product">Adicionais à vontade</p>
+            <p class="price-product">R$ 12,00</p>
+          </div>
         </div>
-        <img class="fotoProduto" src="imagens/hamburgueira.jpeg" alt="">
-      </div>
+           <!-- produto -->
+           <div class="product">
+            <img src="./imagens/copo.jpeg" alt="">
+            <div class="info-product">
+              <p class="name-product">Barca pequena</p>
+              <p class="obs-product">Adicionais à vontade</p>
+              <p class="price-product">R$ 50,00</p>
+            </div>
+          </div>
 
-      <div class="produto" data-secao="Açai" data-nome="1kg" data-preco="35,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">1Kg: Adicionais á vontade</p>
-          <p id="txtPreco">R$ 35,00</p>
+
+      </div>
+    </section>
+    
+    <section id="ice-cream" class="products-section">
+      <div class="products">
+
+        <!-- produto -->
+        <div class="product">
+         <img src="./imagens/hamburgueira.jpeg" alt="">
+         <div class="info-product">
+           <p class="name-product">Copo 300ml</p>
+           <p class="obs-product">Até 8 adicionais</p>
+           <p class="price-product">R$ 12,00</p>
+         </div>
+       </div>
+         <!-- produto -->
+         <div class="product">
+           <img src="./imagens/hamburgueira.jpeg" alt="">
+           <div class="info-product">
+             <p class="name-product">Copo 400ml</p>
+             <p class="obs-product">Até 10 adicionais</p>
+             <p class="price-product">R$ 14,00</p>
+           </div>
+         </div>
+           <!-- produto -->
+       <div class="product">
+         <img src="./imagens/hamburgueira.jpeg" alt="">
+         <div class="info-product">
+           <p class="name-product">Copo 500ml</p>
+           <p class="obs-product">Até 12 adicionais</p>
+           <p class="price-product">R$ 18,00</p>
+         </div>
+       </div>
+          <!-- produto -->
+          <div class="product">
+           <img src="./imagens/hamburgueira.jpeg" alt="">
+           <div class="info-product">
+             <p class="name-product">Copo 700ml</p>
+             <p class="obs-product">Até 14 adicionais</p>
+             <p class="price-product">R$ 25,00</p>
+           </div>
+         </div>
+            <!-- produto -->
+       <div class="product">
+         <img src="./imagens/hamburgueira.jpeg" alt="">
+         <div class="info-product">
+           <p class="name-product">1Kg</p>
+           <p class="obs-product">Adicionais à vontade</p>
+           <p class="price-product">R$ 12,00</p>
+         </div>
+       </div>
+       <!-- produto -->
+       <div class="product">
+         <img src="./imagens/hamburgueira.jpeg" alt="">
+         <div class="info-product">
+           <p class="name-product">1Kg</p>
+           <p class="obs-product">Adicionais à vontade</p>
+           <p class="price-product">R$ 12,00</p>
+         </div>
+       </div>
+       <div class="title">
+         <h2></h2>
+         <span></span>
+       </div>
+      </div>
+    </section>
+
+    <section id="snacks" class="products-section">
+      <div class="products">
+        <!-- produto -->
+        <div class="product">
+         <img src="./imagens/snacks.png" alt="">
+         <div class="info-product">
+           <p class="name-product">Pipoca Boku</p>
+           <p class="obs-product">Sabor galinha</p>
+           <p class="price-product">R$ 5,00</p>
+         </div>
+       </div>
+         <!-- produto -->
+         <div class="product">
+           <img src="./imagens/snacks.png" alt="">
+           <div class="info-product">
+             <p class="name-product">Pipoca Boku</p>
+             <p class="obs-product">Sabor galinha</p>
+             <p class="price-product">R$ 5,00</p>
+           </div>
+         </div>
+           <!-- produto -->
+       <div class="product">
+         <img src="./imagens/snacks.png" alt="">
+         <div class="info-product">
+           <p class="name-product">Pipoca Boku</p>
+           <p class="obs-product">Sabor galinha</p>
+           <p class="price-product">R$ 5,00</p>
+         </div>
+       </div>
+       <div class="title">
+         <h2></h2>
+         <span></span>
+       </div>
+           <!-- produto -->
+           <div class="product">
+             <img src="./imagens/snacks.png" alt="">
+             <div class="info-product">
+               <p class="name-product">Pipoca Boku</p>
+               <p class="obs-product">Sabor galinha</p>
+               <p class="price-product">R$ 5,00</p>
+             </div>
+           </div>
+           <div class="title">
+             <h2></h2>
+             <span></span>
+           </div>
+               <!-- produto -->
+       <div class="product">
+         <img src="./imagens/snacks.png" alt="">
+         <div class="info-product">
+           <p class="name-product">Pipoca Boku</p>
+           <p class="obs-product">Sabor galinha</p>
+           <p class="price-product">R$ 5,00</p>
+         </div>
+       </div>
+       <div class="title">
+         <h2></h2>
+         <span></span>
+       </div>
+           <!-- produto -->
+           <div class="product">
+             <img src="./imagens/snacks.png" alt="">
+             <div class="info-product">
+               <p class="name-product">Pipoca Boku</p>
+               <p class="obs-product">Sabor galinha</p>
+               <p class="price-product">R$ 5,00</p>
+             </div>
+           </div>
+           <div class="title">
+             <h2></h2>
+             <span></span>
+           </div>
+      </div>
+    </section>
+
+    <section id="drinks" class="products-section">
+    <div class="products">
+      <!-- produto -->
+      <div class="product">
+        <img src="./imagens/coca.jpg" alt="">
+        <div class="info-product">
+          <p class="name-product">Coca-Cola 250ml</p>
+          <p class="obs-product">Latinha</p>
+          <p class="price-product">R$ 5,00</p>
         </div>
-        <img class="fotoProduto" src="imagens/hamburgueira.jpeg" alt="">
       </div>
-
+        <!-- produto -->
+        <div class="product">
+          <img src="./imagens/coca.jpg" alt="">
+          <div class="info-product">
+            <p class="name-product">Coca-Cola 1L</p>
+            <p class="obs-product">Casco retornável</p>
+            <p class="price-product">R$ 10,00</p>
+          </div>
+        </div>
+          <!-- produto -->
+      <div class="product">
+        <img src="./imagens/coca.jpg" alt="">
+        <div class="info-product">
+          <p class="name-product">Coca-Cola 2L</p>
+          <p class="obs-product">Para viagem</p>
+          <p class="price-product">R$ 12,00</p>
+        </div>
     </div>
 
-
-    <div id="sorvetes" class="conteudo">
-       <!-- hamburgueira -->
-       <div class="produto" data-secao="Sorvetes" data-nome="300ml" data-preco="12,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">300ml: Até 8 Adicionais</p>
-          <p id="txtPreco">R$ 12,00</p>
-        </div>
-        <img class="fotoProduto" src="imagens/sorvetes.jpg" alt="">
-      </div>
-
-      <div class="produto" data-secao="Sorvetes" data-nome="400ml" data-preco="14,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">400ml: Até 10 Adicionais</p>
-          <p id="txtPreco">R$ 14,00</p>
-        </div>
-        <img class="fotoProduto" src="imagens/sorvetes.jpg" alt="">
-      </div>
-
-      <div class="produto" data-secao="Sorvetes" data-nome="500ml" data-preco="18,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">500ml: Até 12 Adicionais</p>
-          <p id="txtPreco">R$ 18,00</p>
-        </div>
-        <img class="fotoProduto" src="imagens/sorvetes.jpg" alt="">
-      </div>
-
-      <div class="produto" data-secao="Sorvetes" data-nome="700ml" data-preco="25,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">700ml: Até 14 Adicionais</p>
-          <p id="txtPreco">R$ 25,00</p>
-        </div>
-        <img class="fotoProduto" src="imagens/sorvetes.jpg" alt="">
-      </div>
-
-      <div class="produto" data-secao="Sorvetes" data-nome="1kg" data-preco="35,00" onclick="pegarInfoModal(this)">
-        <div class="sobreProduto">
-          <p id="txtProduto">1Kg: Adicionais á vontade</p>
-          <p id="txtPreco">R$ 35,00</p>
-        </div>
-        <img class="fotoProduto" src="imagens/sorvetes.jpg" alt="">
-      </div>
+    </section>
     </div>
-  
-    <div id="snacks" class="conteudo">
-    </div>
-
-    <div id="bebidas" class="conteudo">
-    </div>
-
-
-    <!-- modal adicionar recheios -->
-    <div class="modaladicionar">
-      <div class="cabecalho">
-        <p class="titulomodal"></p>
-        <svg id="iconclose" onclick="fecharModalAdicionar()" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" class="feather feather-x">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </div>
-
-      <div class="infomodal">
-        <p id="produtomodal"></p>
-        <p id="precomodal"></p>
-        <p id="textomodal">Escolha os seus recheios favoritos em nosso cardápio.</p>
-      </div>
-
-      <div class="btnadicionar">
-        <div class="qtdModalAdicionar">
-          <svg id="iconAddMais" onclick="aumentarQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="feather feather-plus">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-          <p id="qtd">1</p>
-          <svg id="iconAddMenos" onclick="diminuirQuantidade()" xmlns="http://www.w3.org/2000/svg" width="24"
-            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="feather feather-minus">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-          </svg>
-        </div>
-        <a href="" id="btnAdicionarRecheios">Adicionar Recheios</a>
-      </div>
-    </div>
-
   </main>
 
 
-
+  <!-- scripts -->
   <script type="text/javascript" src="scripts/tabs.js"></script>
-  <script type="text/javascript" src="scripts/modalMaisInfomacoes.js"></script>
-  <script type="text/javascript" src="scripts/modalAdicionarRecheio.js"></script>
   <script type="text/javascript" src="scripts/pegarHora.js"></script>
-
-
 </body>
 
 </html>
