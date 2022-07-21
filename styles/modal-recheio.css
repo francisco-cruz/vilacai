@@ -2,11 +2,10 @@
     background-color: rgba(0, 0, 0, .3);
     width: 100vw;
     height: 100vh;
-    z-index: 100;
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
+    display: flex;
     justify-content: flex-end;
     align-items: center;
 }
@@ -14,13 +13,21 @@
 .modal-recheio {
     background-color: white;
     width: 550px;
-    min-height: 100vh;
+    max-height: 100vh;
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;  
     position: absolute;
     animation: modalRecheio .5s ease-in-out;
     overflow-y: scroll;
+}
+
+.main-section {
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
 }
 /* animação do modal recheio */
 @keyframes modalRecheio {
@@ -35,17 +42,19 @@
 
 .header-modal-recheio {
     width: 100%;
-    height: 80px;
+    position: fixed;
+    background-color: white; 
+}
+
+.items-header-modal-recheio {
     display: flex;
     align-items: center;
-    justify-content: last baseline;
+    padding: 16px 0;
 }
 .header-modal-recheio h1 {
-    position: relative;
-    left: 50%;
-    transform: translateX(-75%);
-    
+    margin-left: 16px; 
 }
+
 .bg-icon-back {
     display: flex;
     align-items: center;
@@ -61,6 +70,7 @@
 
 /* imagem do modal */
 .img-modal-recheio {
+    margin-top: 70px;
     width: 100%;
     height: 400px;
     object-fit: cover;
@@ -73,10 +83,14 @@
     margin-left: 16px;
 }
 
+.section-modal-recheio {
+    font-size: 14px;
+    font-weight: 600;
+}
 .info-modal-recheio h1 {
     font-size: 24px;
     font-weight: 300;
-    margin-top: 16px;
+    margin-top: 8px;
 }
 .price-modal-recheio {
     font-size: 18px;
@@ -88,4 +102,86 @@
     font-weight: 300;
     margin-top: 24px;
     color: #A6A6A6;
+}
+/* estilo da seção */
+.qtd-recheio {
+    background-color: #F2F2F2;
+    padding: 16px 0;
+}
+
+.title-qtd-recheio {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.cont-qtd-recheio {
+    margin-top: 8px;
+    font-size: 15px;
+    color: #A6A6A6;
+}
+
+.items-qtd-recheio {
+   margin-left: 16px;
+}
+
+.recheio {
+    margin-top: 32px;
+}
+
+.items-recheios {
+    background-color: #291A3B;
+    padding-top: 1px;
+    padding-bottom: 24px;
+}
+.item-recheio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:white;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 24px;
+}
+.btn-quantidade {
+    display: flex;
+    align-items: center;
+    
+}
+
+.btn-quantidade p {
+    padding: 0 16px;
+}
+
+
+/* footer */
+.footer {
+    width: 500px;
+    height: 70px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    padding: 32px;
+}
+
+.items-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-qtd-footer {
+    display: flex;
+    align-items: center;
+    border: #A6A6A6 1px solid;
+    border-radius: 8px;
+    padding: 16px 2px ;
+  
+}
+.btn-qtd-footer p {
+   padding: 0 70px;
+}
+
+.btn-continue {
+    background-color: #FAE319;
+    padding: 21px 70px;
+    border-radius: 8px;
 }

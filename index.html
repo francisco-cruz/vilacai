@@ -22,7 +22,8 @@
       <!-- background e foto do perfil -->
       <div class="perfil-bg">
         <img src="./imagens/ice-cream.jpg" alt="plano de fundo" id="background-img">
-        <img src="./imagens/foto-perfil.jpeg" alt="foto do perfil" id="perfil-img"></div>
+        <img src="./imagens/foto-perfil.jpeg" alt="foto do perfil" id="perfil-img">
+      </div>
       <div class="text-info">
         <div>
           <h1>Vilaçaí</h1>
@@ -89,33 +90,6 @@
             <p class="price-product">R$ 18,00</p>
           </div>
         </div>
-        <!-- produto -->
-        <div class="product" onclick="openModalRecheio()" data-section="Açaí">
-          <img src="./imagens/copo.jpeg" alt="">
-          <div class="info-product">
-            <p class="name-product">Copo 700ml</p>
-            <p class="obs-product">Até 14 adicionais</p>
-            <p class="price-product">R$ 25,00</p>
-          </div>
-        </div>
-        <!-- produto -->
-        <div class="product" onclick="openModalRecheio()" data-section="Açaí">
-          <img src="./imagens/copo.jpeg" alt="">
-          <div class="info-product">
-            <p class="name-product">1Kg</p>
-            <p class="obs-product">Adicionais à vontade</p>
-            <p class="price-product">R$ 12,00</p>
-          </div>
-        </div>
-        <!-- produto -->
-        <div class="product" onclick="openModalRecheio()" data-section="Açaí">
-          <img src="./imagens/copo.jpeg" alt="">
-          <div class="info-product">
-            <p class="name-product">Barca pequena</p>
-            <p class="obs-product">Adicionais à vontade</p>
-            <p class="price-product">R$ 50,00</p>
-          </div>
-        </div>
       </div>
     </section>
     <!-- ice-cream -->
@@ -153,37 +127,6 @@
             <p class="obs-product">Até 12 adicionais</p>
             <p class="price-product">R$ 18,00</p>
           </div>
-        </div>
-        <!-- produto -->
-        <div class="product">
-          <img src="./imagens/hamburgueira.jpeg" alt="">
-          <div class="info-product">
-            <p class="name-product">Copo 700ml</p>
-            <p class="obs-product">Até 14 adicionais</p>
-            <p class="price-product">R$ 25,00</p>
-          </div>
-        </div>
-        <!-- produto -->
-        <div class="product">
-          <img src="./imagens/hamburgueira.jpeg" alt="">
-          <div class="info-product">
-            <p class="name-product">1Kg</p>
-            <p class="obs-product">Adicionais à vontade</p>
-            <p class="price-product">R$ 12,00</p>
-          </div>
-        </div>
-        <!-- produto -->
-        <div class="product">
-          <img src="./imagens/hamburgueira.jpeg" alt="">
-          <div class="info-product">
-            <p class="name-product">1Kg</p>
-            <p class="obs-product">Adicionais à vontade</p>
-            <p class="price-product">R$ 12,00</p>
-          </div>
-        </div>
-        <div class="title">
-          <h2></h2>
-          <span></span>
         </div>
       </div>
     </section>
@@ -226,37 +169,6 @@
         <div class="title">
           <h2></h2>
           <span></span>
-        </div>
-        <!-- produto -->
-        <div class="product">
-          <img src="./imagens/snacks.png" alt="">
-          <div class="info-product">
-            <p class="name-product">Pipoca Boku</p>
-            <p class="obs-product">Sabor galinha</p>
-            <p class="price-product">R$ 5,00</p>
-          </div>
-        </div>
-        <div class="title">
-          <h2></h2>
-          <span></span>
-        </div>
-        <!-- produto -->
-        <div class="product">
-          <img src="./imagens/snacks.png" alt="">
-          <div class="info-product">
-            <p class="name-product">Pipoca Boku</p>
-            <p class="obs-product">Sabor galinha</p>
-            <p class="price-product">R$ 5,00</p>
-          </div>
-        </div>
-        <!-- produto -->
-        <div class="product">
-          <img src="./imagens/snacks.png" alt="">
-          <div class="info-product">
-            <p class="name-product">Pipoca Boku</p>
-            <p class="obs-product">Sabor galinha</p>
-            <p class="price-product">R$ 5,00</p>
-          </div>
         </div>
       </div>
     </section>
@@ -347,21 +259,80 @@
     <div class="modal-recheio">
       <header class="header-modal-recheio">
         <!-- icone voltar -->
-        <div class="bg-icon-back" onclick="closedModalRecheio()">
-          <svg id="icon-back" onclick="closedModalRecheio()" width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.725 2.225L8.25 0.75L0 9L8.25 17.25L9.725 15.775L2.95 9L9.725 2.225Z" fill="black" />
-          </svg>
+        <div class="items-header-modal-recheio">
+          <div class="bg-icon-back" onclick="closedModalRecheio()">
+            <svg id="icon-back" onclick="closedModalRecheio()" width="10" height="18" viewBox="0 0 10 18" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.725 2.225L8.25 0.75L0 9L8.25 17.25L9.725 15.775L2.95 9L9.725 2.225Z" fill="black" />
+            </svg>
+          </div>
+          <h1>Vilaçaí</h1>
         </div>
-        <h1>Nome seção</h1>
       </header>
-      <img class="img-modal-recheio" src="./imagens/copo.jpeg" alt="">
-      <div class="info-modal-recheio">
-        <h1>Copo 300ml</h1>
-        <p class="price-modal-recheio">R$ 12,00</p>
-        <p class="obs-modal-recheio">Até 8 recheios</p>
+      <main class="main-section">
+        <img class="img-modal-recheio" src="./imagens/copo.jpeg" alt="">
+        <div class="info-modal-recheio">
+          <p class="section-modal-recheio">Açaí</p>
+          <h1>Copo 300ml</h1>
+          <p class="price-modal-recheio">R$ 12,00</p>
+          <p class="obs-modal-recheio">Até 8 recheios</p>
+        </div>
+        <!-- seção açaí -->
+        <section class="recheio">
+          <!-- contador de recheios -->
+          <div class="qtd-recheio">
+            <div class="items-qtd-recheio">
+              <p class="title-qtd-recheio">Recheios</p>
+              <p class="cont-qtd-recheio">0 de 8</p>
+            </div>
+          </div>
+          <!-- recheios -->
+          <div class="items-recheios">
+            <!-- item -->
+            <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- seção sorvete -->
+        <section class="recheio"></section>
+
+      </main>
+      <!-- footer -->
+      <div class="footer">
+        <div class="items-footer">
+          <div class="btn-qtd-footer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+          </div>
+          <div class="btn-continue">Continuar R$ 100,00</div>
+
+        </div>
       </div>
-      <section class="recheio-acai"></section>
-      <section class="recheio-ice-cream"></section>
     </div>
   </div>
   <!-- scripts -->

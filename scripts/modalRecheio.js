@@ -1,7 +1,7 @@
 function openModalRecheio() {
     let modal = document.querySelector('.bg-modal-recheio');
     modal.style.display = 'flex';
-    showInfo();
+    
    // tirar scroll da tela
    let body = document.querySelector("html");
    body.style.overflow = "hidden";
@@ -15,6 +15,7 @@ function openModalRecheio() {
    body.style.overflow = "auto";
  }
 
- function showInfo(produto){
- 
- }
+ function showInfo(){
+  let section = document.getAttribute('data-section');
+  console.log(section)
+ }showInfo();
