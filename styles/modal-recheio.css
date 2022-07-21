@@ -27,7 +27,6 @@
     max-height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
-
 }
 /* animação do modal recheio */
 @keyframes modalRecheio {
@@ -114,7 +113,7 @@
 .qtd-recheio-geral {
     position: -webkit-sticky;
     position: sticky;
-    top: 150px;
+    top: 70px;
     background-color: #F2F2F2;
     padding: 16px 0;
 }
@@ -146,6 +145,7 @@
     background-color: #291A3B;
     padding-top: 1px;
     padding-bottom: 24px;
+    margin-bottom: 100px;
 }
 .item-recheio {
     display: flex;
@@ -176,7 +176,7 @@
     background-color: white;
     position: fixed;
     bottom: 0;
-    padding: 24px 32px;
+    padding: 16px 32px;
 }
 
 .items-footer {

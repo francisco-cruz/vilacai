@@ -12,6 +12,7 @@ function openModalRecheio() {
     // colocar scroll na tela
    let body = document.querySelector("html");
    body.style.overflow = "auto";
+   sessionStorage.clear();
  }
 
  function getInfo(produto){
@@ -27,6 +28,8 @@ function openModalRecheio() {
   let sectionPage = document.querySelector('.section-modal-recheio');
   let namePage = document.querySelector('.name-modal-recheio');
   let pricePage = document.querySelector('.price-modal-recheio');
+  sessionStorage.setItem('price', price);
+  console.log(sessionStorage.getItem(price));
   let additionalPage = document.querySelector('.obs-modal-recheio');
   let contAdditionalPage = document.querySelector('#cont-additional-fixed');
    // colocando as informaçoes nos componentes
@@ -35,11 +38,17 @@ function openModalRecheio() {
   pricePage.innerText = "R$ " + price;
   additionalPage.innerText = additional;
   contAdditionalPage.innerText = contAdditional;
+  console.log(price)
+  let priceText = document.querySelector('#price-total');
+priceText.innerText ="R$ "+ price;
  }
-
 //  botão quantidade footer
 let contText = document.querySelector('#text-qtd-footer');
 let contTextReal = parseInt(contText.innerText);
+let price = sessionStorage.getItem('price');
+let priceReal = parseInt(price);
+let priceText = document.querySelector('#price-total');
+let priceTotal = priceReal;
 // somar
  function buttonAddFooter() {
   if(contTextReal === 10) {
@@ -49,6 +58,8 @@ let contTextReal = parseInt(contText.innerText);
   } else {
     contTextReal +=1;
     contText.innerText= contTextReal;
+    priceTotal = contTextReal * priceReal;
+    priceText.innerText ="R$ "+ priceTotal +",00";
   }
  }
 //  diminuir
@@ -60,12 +71,7 @@ function buttonMinusFooter() {
   } else {
     contTextReal -=1;
     contText.innerText= contTextReal;
+    priceTotal =contTextReal * priceReal;
+    priceText.innerText ="R$ "+ priceTotal +",00";
   }
  }
-
-let price = produto.getAttribute('data-price');
-  let priceText = document.querySelector('#price-total');
-  priceText.innerText ="R$ "+ price;
-  
-
-  let priceCont = parseInt(priceText.innerText); 
