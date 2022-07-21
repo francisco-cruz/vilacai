@@ -1,3 +1,7 @@
+
+
+
+
 function openModalRecheio() {
     let modal = document.querySelector('.bg-modal-recheio');
     modal.style.display = 'flex';
@@ -12,12 +16,9 @@ function openModalRecheio() {
     // colocar scroll na tela
    let body = document.querySelector("html");
    body.style.overflow = "auto";
-   sessionStorage.clear();
  }
-
- function getInfo(produto){
-  // chamando função abrir modal
-  openModalRecheio();
+ 
+ function getInfo(produto){ 
   // pegando as informações dos produto
   let section = produto.getAttribute('data-section');
   let name = produto.getAttribute('data-name');
@@ -28,8 +29,6 @@ function openModalRecheio() {
   let sectionPage = document.querySelector('.section-modal-recheio');
   let namePage = document.querySelector('.name-modal-recheio');
   let pricePage = document.querySelector('.price-modal-recheio');
-  sessionStorage.setItem('price', price);
-  console.log(sessionStorage.getItem(price));
   let additionalPage = document.querySelector('.obs-modal-recheio');
   let contAdditionalPage = document.querySelector('#cont-additional-fixed');
    // colocando as informaçoes nos componentes
@@ -38,9 +37,10 @@ function openModalRecheio() {
   pricePage.innerText = "R$ " + price;
   additionalPage.innerText = additional;
   contAdditionalPage.innerText = contAdditional;
-  console.log(price)
   let priceText = document.querySelector('#price-total');
-priceText.innerText ="R$ "+ price;
+  priceText.innerText ="R$ "+ price;
+ // chamando função abrir modal
+  openModalRecheio();
  }
 //  botão quantidade footer
 let contText = document.querySelector('#text-qtd-footer');
@@ -49,6 +49,7 @@ let price = sessionStorage.getItem('price');
 let priceReal = parseInt(price);
 let priceText = document.querySelector('#price-total');
 let priceTotal = priceReal;
+
 // somar
  function buttonAddFooter() {
   if(contTextReal === 10) {
