@@ -64,7 +64,7 @@
       <!-- seção -->
       <div class="products">
         <!-- produto -->
-        <div class="product" onclick="openModalRecheio()" data-section="Açaí">
+        <div class="product" onclick="getInfo(this)" data-section="Açaí" data-name="Copo 300ml" data-price="12,00" data-additional="Até 8 adicionais" data-cont-additional="8">
           <img src="./imagens/copo.jpeg" alt="">
           <div class="info-product">
             <p class="name-product">Copo 300ml</p>
@@ -73,7 +73,7 @@
           </div>
         </div>
         <!-- produto -->
-        <div class="product" onclick="openModalRecheio()" data-section="Açaí">
+        <div class="product" onclick="getInfo(this)" data-section="Açaí" data-name="Copo 400ml" data-price="14,00" data-additional="Até 10 adicionais" data-cont-additional="10">
           <img src="./imagens/copo.jpeg" alt="">
           <div class="info-product">
             <p class="name-product">Copo 400ml</p>
@@ -82,7 +82,7 @@
           </div>
         </div>
         <!-- produto -->
-        <div class="product" onclick="openModalRecheio()" data-section="Açaí">
+        <div class="product" onclick="getInfo(this)" data-section="Açaí" data-name="Copo 500ml" data-price="18,00" data-additional="Até 12 adicionais" data-cont-additional="12">
           <img src="./imagens/copo.jpeg" alt="">
           <div class="info-product">
             <p class="name-product">Copo 500ml</p>
@@ -100,9 +100,9 @@
         <p>6 opções</p>
       </div>
       <!-- seção -->
-      <div class="products">
+      <div class="products" >
         <!-- produto -->
-        <div class="product">
+        <div class="product" onclick="getInfo(this)" data-section="Sorvetes" data-name="Copo 300ml" data-price="12,00" data-additional="Até 8 adicionais" data-cont-additional="8">
           <img src="./imagens/hamburgueira.jpeg" alt="">
           <div class="info-product">
             <p class="name-product">Copo 300ml</p>
@@ -111,7 +111,7 @@
           </div>
         </div>
         <!-- produto -->
-        <div class="product">
+        <div class="product" onclick="getInfo(this)" data-section="Sorvetes" data-name="Copo 400ml" data-price="14,00" data-additional="Até 10 adicionais" data-cont-additional="10">
           <img src="./imagens/hamburgueira.jpeg" alt="">
           <div class="info-product">
             <p class="name-product">Copo 400ml</p>
@@ -120,7 +120,7 @@
           </div>
         </div>
         <!-- produto -->
-        <div class="product">
+        <div class="product" onclick="getInfo(this)" data-section="Sorvetes" data-name="Copo 500ml" data-price="18,00" data-additional="Até 12 adicionais" data-cont-additional="12">
           <img src="./imagens/hamburgueira.jpeg" alt="">
           <div class="info-product">
             <p class="name-product">Copo 500ml</p>
@@ -272,24 +272,339 @@
       <main class="main-section">
         <img class="img-modal-recheio" src="./imagens/copo.jpeg" alt="">
         <div class="info-modal-recheio">
-          <p class="section-modal-recheio">Açaí</p>
-          <h1>Copo 300ml</h1>
-          <p class="price-modal-recheio">R$ 12,00</p>
-          <p class="obs-modal-recheio">Até 8 recheios</p>
+          <p class="section-modal-recheio"></p>
+          <h1 class="name-modal-recheio"></h1>
+          <p class="price-modal-recheio"></p>
+          <p class="obs-modal-recheio"></p>
+        </div>
+        <div class="qtd-recheio-geral">
+          <div class="items-qtd-recheio">
+            <p class="title-qtd-recheio">Adicionais</p>
+            <div class="items-cont-recheio">
+               <p class="cont-qtd-recheio">0<p class="cont-qtd-recheio">de</p> <p class="cont-qtd-recheio" id="cont-additional-fixed"></p></p>
+            </div>
+           
+          </div>
         </div>
         <!-- seção açaí -->
         <section class="recheio">
           <!-- contador de recheios -->
           <div class="qtd-recheio">
             <div class="items-qtd-recheio">
-              <p class="title-qtd-recheio">Recheios</p>
-              <p class="cont-qtd-recheio">0 de 8</p>
+              <p class="title-qtd-recheio">Frutas</p>
             </div>
           </div>
           <!-- recheios -->
           <div class="items-recheios">
             <!-- item -->
             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
+              <p>Disqueti</p>
+              <div class="btn-quantidade">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-plus">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <p>0</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-minus">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </div>
+            </div>
+             <!-- item -->
+             <div class="item-recheio">
               <p>Disqueti</p>
               <div class="btn-quantidade">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -316,20 +631,20 @@
       <div class="footer">
         <div class="items-footer">
           <div class="btn-qtd-footer">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <svg id="btn-add-footer" onclick="buttonAddFooter()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-plus">
                   <line x1="12" y1="5" x2="12" y2="19"></line>
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
-                <p>0</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <p id="text-qtd-footer">1</p>
+                <svg id="btn-minus-footer" onclick="buttonMinusFooter()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-minus">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                 </svg>
           </div>
-          <div class="btn-continue">Continuar R$ 100,00</div>
+          <div class="btn-continue"><p>Continuar R$</p><p id="price-total">0</p></div>
 
         </div>
       </div>
