@@ -1,4 +1,4 @@
-let products = [{
+let products = {
     "acai": [{
             "section": "Açaí",
             "name": "Copo 300 ml",
@@ -29,9 +29,7 @@ let products = [{
             "qntd": 0,
             "qntd-additionais": 12
         },
-    ]
-},
-{
+    ],
     "ice-cream": [{
             "section": "Sorvetes",
             "name": "Hamburgueira 300 ml",
@@ -62,9 +60,7 @@ let products = [{
             "qntd": 0,
             "qntd-additionais": 12            
         },
-    ]
-},
-{
+    ],
     "snacks": [{
             "section": "Snacks",
             "name": "Pipoca Doce",
@@ -92,10 +88,7 @@ let products = [{
             "valor": 0,
             "qntd": 0
         },
-    ]
-    
-},
-{
+    ],
     "drinks": [{
             "section": "Bebidas",
             "name": "Coca 1L",
@@ -124,5 +117,8 @@ let products = [{
             "qntd": 0
         },
     ]
-},
-]
+}
+
+for(i in products){
+    console.log(i);
+}

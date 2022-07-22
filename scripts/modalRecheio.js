@@ -1,81 +1,105 @@
+function openModalRecheio(contentProduto) {
+  //contentProduto.getAttribute
+  const section = contentProduto.getAttribute("data-section")
+  const id = contentProduto.getAttribute("data-id-product")
+  htmlContentModal(section, id);
 
-function openModalRecheio() {
-    let modal = document.querySelector('.bg-modal-recheio');
-    modal.style.display = 'flex';
-   // tirar scroll da tela
-   let scroll = document.querySelector("html");
-   scroll.style.overflow = "hidden";
- }
- 
- function closedModalRecheio() {
-    let modal = document.querySelector('.bg-modal-recheio');
-    modal.style.display = 'none';
-    // colocar scroll na tela
-   let body = document.querySelector("html");
-   body.style.overflow = "auto";
- }
- 
- function getInfo(produto){ 
-  // pegando as informações dos produto
-  let section = produto.getAttribute('data-section');
-  let name = produto.getAttribute('data-name');
+  let modal = document.querySelector('.bg-modal-recheio');
+  modal.style.display = 'flex';
+  // tirar scroll do body
+  let scroll = document.querySelector("html");
+  scroll.style.overflow = "hidden";
 
-  let qntd = produto.getAttribute('data-qntd-produto');
-  let qntdProduto = parseInt(qntd);
-  sessionStorage.setItem('qntd-produto', qntdProduto);
+}
 
-  let price = produto.getAttribute('data-price');
-  let priceReal = parseInt(price);
-  sessionStorage.setItem('price', priceReal);
+function closedModalRecheio() {
+  let modal = document.querySelector('.bg-modal-recheio');
+  modal.style.display = 'none';
+  // colocar scroll no body
+  let body = document.querySelector("html");
+  body.style.overflow = "auto";
+}
 
-  let additional = produto.getAttribute('data-additional');
-  let contAdditional = produto.getAttribute('data-cont-additional');
 
-  // pegando o componente da tela
-  let sectionPage = document.querySelector('.section-modal-recheio');
-  let namePage = document.querySelector('.name-modal-recheio');
-  let pricePage = document.querySelector('.price-modal-recheio');
-  let additionalPage = document.querySelector('.obs-modal-recheio');
-  let contAdditionalPage = document.querySelector('#cont-additional-fixed');
-   // colocando as informaçoes nos componentes
-  sectionPage.innerText = section;
-  namePage.innerText = name;
-  pricePage.innerText = "R$ " + price;
-  additionalPage.innerText = additional;
-  contAdditionalPage.innerText = contAdditional;
-  let priceText = document.querySelector('#price-total');
-  priceText.innerText ="R$ "+ price;
- // chamando função abrir modal
-  openModalRecheio();
- }
 
-let qntdProdutoReal = sessionStorage.getItem('qntd-produto');
-let price2 = sessionStorage.getItem('price');
+// pegando as informações
+function getContentModal(section, id) {
+  console.log(products[section][id])
+  return products[section][id];
+}
 
-let priceText = document.querySelector('#price-total');
-priceText.innerText ="R$ "+ price2 +",00";
+function htmlContentModal(section, id) {
+  let data = getContentModal(section, id);
+  // função que pega as informações
+  let content = '<img class="img-modal-recheio" src="' + data["img"] + '" alt="">' +
+    '<div class="info-modal-recheio">' +
+    '<p class="section-modal-recheio">' + data["section"] + '</p>' +
+    '<h1 class="name-modal-recheio">' + data["name"] + '</h1>' +
+    '<p class="price-modal-recheio">'+'R$ ' + data["price"] + ',00'+'</p>' +
+    '<p class="obs-modal-recheio">' + data["obs-product"] + '</p>' +
+    '</div>';
+  document.getElementById('content-product').innerHTML = content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// conteudo do modal
+function contentModal() {
+  for (i in products)
+    console.log(i);
+}
 // somar
- function buttonAddFooter() {
+function buttonAddFooter() {
 
-  if(qntdProdutoReal === 10) {
-    document.querySelector('#btn-add-footer').ddEventListener('click', (event) => {  
-      event.preventDefault();  
+  if (qntdProdutoReal === 10) {
+    document.querySelector('#btn-add-footer').ddEventListener('click', (event) => {
+      event.preventDefault();
     });
   } else {
-    qntdProdutoReal +=1;
+    qntdProdutoReal += 1;
     price2 = qntdProdutoReal * price2;
-    priceText.innerText ="R$ "+ price2 +",00";
+    priceText.innerText = "R$ " + price2 + ",00";
   }
- }
+}
 //  diminuir
 function buttonMinusFooter() {
-  if(qntdProdutoReal=== 0) {
-    document.querySelector('#btn-minus-footer').ddEventListener('click', (event) => {  
-      event.preventDefault();  
+  if (qntdProdutoReal === 0) {
+    document.querySelector('#btn-minus-footer').ddEventListener('click', (event) => {
+      event.preventDefault();
     });
   } else {
-    qntdProdutoReal -=1;
+    qntdProdutoReal -= 1;
     price2 = qntdProdutoReal * price2;
-    priceText.innerText ="R$ "+ price2 +",00";
+    priceText.innerText = "R$ " + price2 + ",00";
   }
- }
+}

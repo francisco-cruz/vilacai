@@ -15,6 +15,7 @@
 </head>
 <body>
   <main>
+    
     <!-- cabeçalho -->
     <header class="header">
       <!-- background e foto do perfil -->
@@ -43,6 +44,7 @@
         </div>
       </div>
     </header>
+
     <!--tabs -->
     <div class="tab">
       <hr>
@@ -51,6 +53,7 @@
       <button class="tab-button" onclick="openTab(event, 'snacks')">Snacks</button>
       <button class="tab-button" onclick="openTab(event, 'drinks')">Bebidas</button>
     </div>
+
     <!-- conteudo das tabs -->
     <!-- acai -->
     <section id="acai" class="products-section">
@@ -102,6 +105,7 @@
     </section>
     </div>
   </main>
+
   <!-- modal informações da loja -->
   <div class="bg-modal-store">
     <div class="modal-store">
@@ -122,7 +126,7 @@
           </div>
         </div>
         <div class="info-adress">
-          <!-- cinone mapa -->
+          <!-- inone mapa -->
           <svg class="icon-modal-store" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="feather feather-map-pin">
@@ -145,6 +149,7 @@
       </svg>
     </div>
   </div>
+
   <!-- modal adicionar recheios -->
   <div class="bg-modal-recheio" onclick="closedModalRecheio()">
     <div class="modal-recheio">
@@ -161,25 +166,20 @@
         </div>
       </header>
       <div class="main-section">
-        <img class="img-modal-recheio" src="./imagens/copo.jpeg" alt="">
-        <div class="info-modal-recheio">
-          <p class="section-modal-recheio"></p>
-          <h1 class="name-modal-recheio"></h1>
-          <p class="price-modal-recheio"></p>
-          <p class="obs-modal-recheio"></p>
+        <!-- informações do produto selecionado -->
+        <div id="content-product">
+
         </div>
+        <!-- contador de recheio geral -->
         <div class="qtd-recheio-geral">
           <div class="items-qtd-recheio">
             <p class="title-qtd-recheio">Adicionais</p>
             <div class="items-cont-recheio">
-              <p class="cont-qtd-recheio">0<p class="cont-qtd-recheio">de 8</p>
-                <p class="cont-qtd-recheio" id="cont-additional-fixed"></p>
-              </p>
+              <p class="cont-qtd-recheio">0 de 8</p>
             </div>
-
           </div>
         </div>
-        <!-- seção açaí -->
+        <!-- seção dos recheios do açaí -->
         <section class="recheio">
           <!-- contador de recheios -->
           <div class="qtd-recheio">
@@ -207,13 +207,13 @@
                 </svg>
               </div>
             </div>
-
           </div>
         </section>
-        <!-- seção sorvete -->
-        <section class="recheio"></section>
 
+        <!-- seção dos recheios dos sorvetes -->
+        <section class="recheio"></section>
       </div>
+
       <!-- footer -->
       <div class="footer">
         <div class="items-footer">
@@ -241,12 +241,18 @@
     </div>
   </div>
   <!-- scripts -->
-  <script type="text/javascript" src="scripts/tabs.js"></script>
-  <script type="text/javascript" src="scripts/pegarHora.js"></script>
-  <script type="text/javascript" src="scripts/modalStore.js"></script>
-  <script type="text/javascript" src="scripts/modalRecheio.js"></script>
+    <!-- banco de dados -->
   <script type="text/javascript" src="scripts/database.js"></script>
+    <!-- botões tab -->
+  <script type="text/javascript" src="scripts/tabs.js"></script>
+    <!-- verificar se está aberto ou fechado -->
+  <script type="text/javascript" src="scripts/pegarHora.js"></script>
+    <!-- pega horário do sistema e retorna "aberto" ou "fechado"  -->
+  <script type="text/javascript" src="scripts/modalStore.js"></script>
+    <!-- modal mais informações sobre  a loja -->
   <script type="text/javascript" src="scripts/script.js"></script>
+    <!-- modal de adiconar recheios -->
+  <script type="text/javascript" src="scripts/modalRecheio.js"></script>
 </body>
 
 </html>

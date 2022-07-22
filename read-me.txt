@@ -1,0 +1,11 @@
+#scripts
+    # script pegar hora --> fechado as terças-feira
+
+
+#css
+    # animação de sa
+
+#html
+    #
+    #
+    #
