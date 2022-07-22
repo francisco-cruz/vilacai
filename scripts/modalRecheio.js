@@ -1,7 +1,4 @@
 
-
-
-
 function openModalRecheio() {
     let modal = document.querySelector('.bg-modal-recheio');
     modal.style.display = 'flex';
@@ -22,9 +19,18 @@ function openModalRecheio() {
   // pegando as informações dos produto
   let section = produto.getAttribute('data-section');
   let name = produto.getAttribute('data-name');
+
+  let qntd = produto.getAttribute('data-qntd-produto');
+  let qntdProduto = parseInt(qntd);
+  sessionStorage.setItem('qntd-produto', qntdProduto);
+
   let price = produto.getAttribute('data-price');
+  let priceReal = parseInt(price);
+  sessionStorage.setItem('price', priceReal);
+
   let additional = produto.getAttribute('data-additional');
   let contAdditional = produto.getAttribute('data-cont-additional');
+
   // pegando o componente da tela
   let sectionPage = document.querySelector('.section-modal-recheio');
   let namePage = document.querySelector('.name-modal-recheio');
@@ -42,37 +48,34 @@ function openModalRecheio() {
  // chamando função abrir modal
   openModalRecheio();
  }
-//  botão quantidade footer
-let contText = document.querySelector('#text-qtd-footer');
-let contTextReal = parseInt(contText.innerText);
-let price = sessionStorage.getItem('price');
-let priceReal = parseInt(price);
-let priceText = document.querySelector('#price-total');
-let priceTotal = priceReal;
 
+let qntdProdutoReal = sessionStorage.getItem('qntd-produto');
+let price2 = sessionStorage.getItem('price');
+
+let priceText = document.querySelector('#price-total');
+priceText.innerText ="R$ "+ price2 +",00";
 // somar
  function buttonAddFooter() {
-  if(contTextReal === 10) {
+
+  if(qntdProdutoReal === 10) {
     document.querySelector('#btn-add-footer').ddEventListener('click', (event) => {  
       event.preventDefault();  
     });
   } else {
-    contTextReal +=1;
-    contText.innerText= contTextReal;
-    priceTotal = contTextReal * priceReal;
-    priceText.innerText ="R$ "+ priceTotal +",00";
+    qntdProdutoReal +=1;
+    price2 = qntdProdutoReal * price2;
+    priceText.innerText ="R$ "+ price2 +",00";
   }
  }
 //  diminuir
 function buttonMinusFooter() {
-  if(contTextReal === 1) {
+  if(qntdProdutoReal=== 0) {
     document.querySelector('#btn-minus-footer').ddEventListener('click', (event) => {  
       event.preventDefault();  
     });
   } else {
-    contTextReal -=1;
-    contText.innerText= contTextReal;
-    priceTotal =contTextReal * priceReal;
-    priceText.innerText ="R$ "+ priceTotal +",00";
+    qntdProdutoReal -=1;
+    price2 = qntdProdutoReal * price2;
+    priceText.innerText ="R$ "+ price2 +",00";
   }
  }
