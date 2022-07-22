@@ -1,3 +1,17 @@
+/* .closed-modal {
+    animation: closedModalRecheio 6s ease-in-out;
+} */
+/* animação de saída */
+@keyframes closedModalRecheio  {
+    0% {
+        position: absolute;
+        right: 0;
+    }
+    100% {
+        right: -500px;
+    }
+    
+}
 .bg-modal-recheio{
     background-color: rgba(0, 0, 0, .3);
     width: 100vw;
@@ -19,7 +33,7 @@
     flex-direction: column;
     justify-content: flex-start;  
     position: absolute;
-    animation: modalRecheio .5s ease-in-out;
+    animation: openModalRecheio .5s ease-in-out;
     overflow-y: scroll;
 }
 
@@ -28,8 +42,8 @@
     overflow-y: auto;
     overflow-x: hidden;
 }
-/* animação do modal recheio */
-@keyframes modalRecheio {
+/* animação de entradada */
+@keyframes openModalRecheio {
     0% {
         position: absolute;
         right: -500px;

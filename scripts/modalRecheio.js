@@ -1,7 +1,9 @@
 function openModalRecheio(contentProduto) {
-  //contentProduto.getAttribute
+  // variaveis com a section e id que estão no data-attributs do html
   const section = contentProduto.getAttribute("data-section")
   const id = contentProduto.getAttribute("data-id-product")
+
+  //chamando função que pede dois paramentos com as variáveis criadas
   htmlContentModal(section, id);
 
   let modal = document.querySelector('.bg-modal-recheio');
@@ -18,17 +20,17 @@ function closedModalRecheio() {
   // colocar scroll no body
   let body = document.querySelector("html");
   body.style.overflow = "auto";
+
 }
 
-
-
-// pegando as informações
+// função que retorna a section e id de products
 function getContentModal(section, id) {
-  console.log(products[section][id])
   return products[section][id];
 }
 
+// função para adicionar html no modal com os paramentros section e id
 function htmlContentModal(section, id) {
+  // variavel que chama função que retorna o objeto
   let data = getContentModal(section, id);
   // função que pega as informações
   let content = '<img class="img-modal-recheio" src="' + data["img"] + '" alt="">' +
@@ -37,6 +39,14 @@ function htmlContentModal(section, id) {
     '<h1 class="name-modal-recheio">' + data["name"] + '</h1>' +
     '<p class="price-modal-recheio">'+'R$ ' + data["price"] + ',00'+'</p>' +
     '<p class="obs-modal-recheio">' + data["obs-product"] + '</p>' +
+    '</div>'+
+    '<div class="qtd-recheio-geral">'+
+    '<div class="items-qtd-recheio">'+
+    '<p class="title-qtd-recheio">Adicionais</p>'+
+    '<div class="items-cont-recheio">'+
+    '<p class="cont-qtd-recheio">0 de ' + data['qntd-additionais'] + '</p>'+
+    '</div>'+
+    '</div>'+
     '</div>';
   document.getElementById('content-product').innerHTML = content;
 }
