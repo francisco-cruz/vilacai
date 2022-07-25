@@ -34,7 +34,7 @@
         </div>
         <div class="div-info-store">
           <div class="info-store">
-            <a href="" onclick="openModal()" class="items-linfo-info">
+            <a  onclick="openModal()" class="items-link-info">
               <p id="link-info-store">Informações da loja</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -155,7 +155,7 @@
   </div>
 
   <!-- modal adicionar recheios -->
-  <div class="bg-modal-recheio" onclick="closedModalRecheio()">
+  <div class="bg-modal-recheio" onclick="">
     <div class="modal-recheio">
       <header class="header-modal-recheio">
         <!-- icone voltar -->
@@ -206,7 +206,7 @@
         </section>
 
         <!-- seção dos recheios dos sorvetes -->
-        <section class="recheio">
+        <section id="section-recheio-icecream" class="recheio">
           <!-- item -->
           <div class="item-recheio">
             <p>sorvete</p>
@@ -227,20 +227,19 @@
           </div>
           
         </section>
-      
 
       <!-- footer -->
       <div class="footer">
         <div class="items-footer">
           <div class="btn-qtd-footer">
-            <svg id="btn-add-footer" onclick="buttonAddFooter()" xmlns="http://www.w3.org/2000/svg" width="24"
+            <svg id="btn-add-footer"  xmlns="http://www.w3.org/2000/svg" width="24"
               height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" class="feather feather-plus">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
-            <p id="text-qtd-footer">1</p>
-            <svg id="btn-minus-footer" onclick="buttonMinusFooter()" xmlns="http://www.w3.org/2000/svg" width="24"
+            <p id="text-qtd-footer">0</p>
+            <svg id="btn-minus-footer" xmlns="http://www.w3.org/2000/svg" width="24"
               height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" class="feather feather-minus">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -255,6 +254,7 @@
       </div>
     </div>
   </div>
+
   <!-- scripts -->
   <!-- banco de dados -->
   <script type="text/javascript" src="scripts/database.js"></script>

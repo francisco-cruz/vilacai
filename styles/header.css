@@ -63,8 +63,11 @@ main {
     align-items: center;
 }
 
-
-.items-linfo-info {
+.items-link-info {
+    display: flex;
+    cursor: pointer;
+}
+.items-info {
     display: flex;
     align-items: center;
 }

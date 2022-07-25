@@ -1,38 +1,35 @@
-function openModalRecheio(contentProduto, IdSection) {
+function openModalRecheio(contentProduto) {
   // variaveis com a section e id que estão no data-attributs do html
   const section = contentProduto.getAttribute("data-section")
   const id = contentProduto.getAttribute("data-id-product")
 
   if (section === 'Açaí') {
-    document.querySelector('#section-recheio-acai').style.display = block;
+    document.querySelector('#section-recheio-acai').style.display = 'block'
+    document.querySelector('#section-recheio-icecream').style.display = 'none'
+
   }
   if (section === 'Sorvetes') {
-    document.querySelector('#section-recheio-icecream').style.display = block;
+    document.querySelector('#section-recheio-icecream').style.display = 'block'
+    document.querySelector('#section-recheio-acai').style.display = 'none'
   }
-  if (section === 'Snacks') {
-    document.querySelector('#section-recheio-snacks').style.display = block;
-  }
-  if (section === 'Bebidas') {
-    document.querySelector('#section-recheio-drinks').style.display = block;
-  }
-  
+
   //chamando função que pede dois paramentos com as variáveis criadas
   htmlContentModal(section, id);
 
-  let modal = document.querySelector('.bg-modal-recheio');
-  modal.style.display = 'flex';
+  let modal = document.querySelector('.bg-modal-recheio')
+  modal.style.display = 'flex'
   // tirar scroll do body
   let scroll = document.querySelector("html");
-  scroll.style.overflow = "hidden";
+  scroll.style.overflow = "hidden"
 
 }
 
 function closedModalRecheio() {
   let modal = document.querySelector('.bg-modal-recheio');
-  modal.style.display = 'none';
+  modal.style.display = 'none'
   // colocar scroll no body
   let body = document.querySelector("html");
-  body.style.overflow = "auto";
+  body.style.overflow = "auto"
 
 }
 
@@ -50,20 +47,58 @@ function htmlContentModal(section, id) {
     '<div class="info-modal-recheio">' +
     '<p class="section-modal-recheio">' + data["section"] + '</p>' +
     '<h1 class="name-modal-recheio">' + data["name"] + '</h1>' +
-    '<p class="price-modal-recheio">'+'R$ ' + data["price"] + ',00'+'</p>' +
+    '<p class="price-modal-recheio">' + 'R$ ' + data["price"] + ',00' + '</p>' +
     '<p class="obs-modal-recheio">' + data["obs-product"] + '</p>' +
-    '</div>'+
-    '<div class="qtd-recheio-geral">'+
-    '<div class="items-qtd-recheio">'+
-    '<p class="title-qtd-recheio">Adicionais</p>'+
-    '<div class="items-cont-recheio">'+
-    '<p class="cont-qtd-recheio">0 de ' + data['qntd-additionais'] + '</p>'+
-    '</div>'+
-    '</div>'+
-    '</div>';
-  document.getElementById('content-product').innerHTML = content;
+    '</div>' +
+    '<div class="qtd-recheio-geral">' +
+    '<div class="items-qtd-recheio">' +
+    '<p class="title-qtd-recheio">Adicionais</p>' +
+    '<div class="items-cont-recheio">' +
+    '<p class="cont-qtd-recheio">0 de ' + data['qntd-additionais'] + '</p>' +
+    '</div>' +
+    '</div>' +
+    '</div>'
+  document.getElementById('content-product').innerHTML = content
+
+  // botão quantidade footer
+  
+
+  let btnAddFooter = document.querySelector('#btn-add-footer')
+  let btnMinusFooter = document.querySelector('#btn-minus-footer')
+  data['value'] = (data['qntd']) * (data['price']);
+
+  btnAddFooter.addEventListener('click', (event) => {
+    document.querySelector('.btn-continue').style.backgroundColor = '#FFCC59'
+    document.querySelector('.btn-continue').style.color = '#1C1C1C'
+    if ( data['qntd'] === 10)  {
+      event.preventDefault()
+    } if ( data['qntd'] >= 0 ) {
+      data['qntd']++
+      document.querySelector('#text-qtd-footer').innerText = data['qntd'];
+      console.log(data['qntd'])     
+}
+  });
+
+  btnMinusFooter.addEventListener('click', (event) => {
+    if (data['qntd'] === 0 ) {
+      event.preventDefault()
+      document.querySelector('.btn-continue').style.backgroundColor = '#FFE099'
+      document.querySelector('.btn-continue').style.color = '#6D6D6C'
+    } else {
+      data['qntd']--
+      document.querySelector('#text-qtd-footer').innerText = data['qntd']
+      console.log(data['qntd'])
+      
+    }
+  
+  });
+
 }
 
+
+
+
+// função botão quantidade footer
 
 
 

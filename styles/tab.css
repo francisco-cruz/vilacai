@@ -30,8 +30,8 @@
     font-size: 12px;
 }
 .active {
-    color: #611C73;
-    border-bottom: 2px solid #E5CE00;
+    color: #522E73;
+    border-bottom: 2px solid #FFCC59;
    
 }
 
@@ -47,7 +47,7 @@
     width: 420px;
     border-radius: 4px;
     height: 380px;
-    background-color: #75228A;
+    background-color: #522E73;
     cursor: pointer;
     transition: transform .3s;
 }
@@ -90,5 +90,5 @@
     font-size: 18px;
     font-weight: 300;
     margin-top: 48px;
-    color: #FAE319;
+    color: #FFCC59;
 }

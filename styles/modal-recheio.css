@@ -153,10 +153,11 @@
 
 .recheio {
     margin-top: 32px;
+    display: none;
 }
 
 .items-recheios {
-    background-color: #291A3B;
+    background-color: #522E73;
     padding-top: 1px;
     padding-bottom: 24px;
     margin-bottom: 100px;
@@ -213,7 +214,7 @@
 }
 
 .btn-continue {
-    background-color: #FAE319;
+    background-color: #FFCC59;
     padding: 21px 70px;
     border-radius: 8px;
     transition: background-color .5s;
@@ -223,10 +224,6 @@
 
 .btn-continue p {
     font-weight: 600;
-}
-
-.btn-continue:hover {
-    background-color: #FAEB64;
 }
 
 #btn-add-footer {
