@@ -1,8 +1,21 @@
-function openModalRecheio(contentProduto) {
+function openModalRecheio(contentProduto, IdSection) {
   // variaveis com a section e id que estão no data-attributs do html
   const section = contentProduto.getAttribute("data-section")
   const id = contentProduto.getAttribute("data-id-product")
 
+  if (section === 'Açaí') {
+    document.querySelector('#section-recheio-acai').style.display = block;
+  }
+  if (section === 'Sorvetes') {
+    document.querySelector('#section-recheio-icecream').style.display = block;
+  }
+  if (section === 'Snacks') {
+    document.querySelector('#section-recheio-snacks').style.display = block;
+  }
+  if (section === 'Bebidas') {
+    document.querySelector('#section-recheio-drinks').style.display = block;
+  }
+  
   //chamando função que pede dois paramentos com as variáveis criadas
   htmlContentModal(section, id);
 

@@ -21,7 +21,7 @@ let products = {
         },
         {
             "section": "Açaí",
-            "name": "copo 700 ml",
+            "name": "Copo 700 ml",
             "obs-product": "Até 12 adicionais",
             "img": "./imagens/copo.jpeg",
             "price": 18,

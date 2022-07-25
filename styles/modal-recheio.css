@@ -25,7 +25,7 @@
 }
 
 .modal-recheio {
-    background-color: white;
+    background-color: #F1EDF2;
     width: 550px;
     height: 100vh;
     max-height: 100vh;
@@ -77,7 +77,7 @@
     padding:10px 16px ;
     cursor: pointer;
 }
-.bg-icon-back:hover {
+.bg-icon-back:active {
     box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -121,14 +121,14 @@
 }
 /* estilo da seção */
 .qtd-recheio {
-    background-color: #F2F2F2;
+    background-color: white;
     padding: 16px 0;
 }
 .qtd-recheio-geral {
     position: -webkit-sticky;
     position: sticky;
     top: 70px;
-    background-color: #F2F2F2;
+    background-color: white;
     padding: 16px 0;
 }
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <!-- titulo da página -->
   <title>Cardápio online</title>
@@ -13,14 +14,15 @@
   <!-- estilos -->
   <link rel="stylesheet" href="./styles/global.css">
 </head>
+
 <body>
   <main>
-    
+
     <!-- cabeçalho -->
     <header class="header">
       <!-- background e foto do perfil -->
       <div class="perfil-bg">
-        <img src="./imagens/ice-cream.jpg" alt="plano de fundo" id="background-img">
+        <img src="./imagens/bg-perfil.png" alt="plano de fundo" id="background-img">
         <img src="./imagens/foto-perfil.jpeg" alt="foto do perfil" id="perfil-img">
       </div>
       <div class="text-info">
@@ -32,14 +34,16 @@
         </div>
         <div class="div-info-store">
           <div class="info-store">
-            <p id="link-info-store" onclick="openModal()">Informações da loja</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="feather feather-info">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="16" x2="12" y2="12"></line>
-              <line x1="12" y1="8" x2="12.01" y2="8"></line>
-            </svg>
+            <a href="" onclick="openModal()" class="items-linfo-info">
+              <p id="link-info-store">Informações da loja</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-info">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -171,7 +175,7 @@
 
         </div>
         <!-- seção dos recheios do açaí -->
-        <section class="recheio">
+        <section id="section-recheio-acai" class="recheio">
           <!-- contador de recheios -->
           <div class="qtd-recheio">
             <div class="items-qtd-recheio">
@@ -202,8 +206,28 @@
         </section>
 
         <!-- seção dos recheios dos sorvetes -->
-        <section class="recheio"></section>
-      </div>
+        <section class="recheio">
+          <!-- item -->
+          <div class="item-recheio">
+            <p>sorvete</p>
+            <div class="btn-quantidade">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-plus">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              <p>0</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-minus">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+          </div>
+          
+        </section>
+      
 
       <!-- footer -->
       <div class="footer">
@@ -232,17 +256,17 @@
     </div>
   </div>
   <!-- scripts -->
-    <!-- banco de dados -->
+  <!-- banco de dados -->
   <script type="text/javascript" src="scripts/database.js"></script>
-    <!-- botões tab -->
+  <!-- botões tab -->
   <script type="text/javascript" src="scripts/tabs.js"></script>
-    <!-- verificar se está aberto ou fechado -->
+  <!-- verificar se está aberto ou fechado -->
   <script type="text/javascript" src="scripts/pegarHora.js"></script>
-    <!-- pega horário do sistema e retorna "aberto" ou "fechado"  -->
+  <!-- pega horário do sistema e retorna "aberto" ou "fechado"  -->
   <script type="text/javascript" src="scripts/modalStore.js"></script>
-    <!-- modal mais informações sobre  a loja -->
+  <!-- modal mais informações sobre  a loja -->
   <script type="text/javascript" src="scripts/script.js"></script>
-    <!-- modal de adiconar recheios -->
+  <!-- modal de adiconar recheios -->
   <script type="text/javascript" src="scripts/modalRecheio.js"></script>
 </body>
 
