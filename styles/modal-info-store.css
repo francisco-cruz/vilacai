@@ -59,17 +59,3 @@
     margin-right: 24px;
     cursor: pointer;
 }
-
-.btn-copy {
-    display: flex;
-    align-items: center;
-    
-    color: #A6A6A6;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 24px;
-}
-.btn-copy p{
-    margin-left: 24px;
-    font-weight: 600;
-}

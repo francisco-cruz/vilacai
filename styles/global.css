@@ -2,6 +2,7 @@
 @import 'tab.css';
 @import 'modal-info-store.css';
 @import 'modal-recheio.css';
+@import 'footer.css';
 
 * {
   margin: 0;

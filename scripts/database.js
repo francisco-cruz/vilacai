@@ -6,7 +6,7 @@ let products = {
             "img": "./imagens/copo.jpeg",
             "price": 12,
             "value": 0,
-            "qntd": 0,
+            "qntd": 1,
             "qntd-additionais": 8
         },
         {
@@ -16,7 +16,7 @@ let products = {
             "img": "./imagens/copo.jpeg",
             "price": 15,
             "valor": 0,
-            "qntd": 0,
+            "qntd": 1,
             "qntd-additionais": 10
         },
         {
@@ -26,7 +26,7 @@ let products = {
             "img": "./imagens/copo.jpeg",
             "price": 18,
             "valor": 0,
-            "qntd": 0,
+            "qntd": 1,
             "qntd-additionais": 12
         },
     ],
@@ -37,7 +37,7 @@ let products = {
             "img": "./imagens/hamburgueira.jpeg",
             "price": 12,
             "valor": 0,
-            "qntd": 0,
+            "qntd": 1,
             "qntd-additionais": 8
         },
         {
@@ -47,7 +47,7 @@ let products = {
             "img": "./imagens/hamburgueira.jpeg",
             "price": 15,
             "valor": 0,
-            "qntd": 0,
+            "qntd": 1,
             "qntd-additionais": 10
         },
         {
@@ -57,7 +57,7 @@ let products = {
             "img": "./imagens/hamburgueira.jpeg",
             "price": 18,
             "valor": 0,
-            "qntd": 0,
+            "qntd": 1,
             "qntd-additionais": 12            
         },
     ],
@@ -68,7 +68,7 @@ let products = {
             "img": "./imagens/snacks.png",
             "price": 5,
             "valor": 0,
-            "qntd": 0
+            "qntd": 1
         },
         {
             "section": "Snacks",
@@ -77,7 +77,7 @@ let products = {
             "img": "./imagens/snacks.png",
             "price": 4,
             "valor": 0,
-            "qntd": 0
+            "qntd": 1
         },
         {
             "section": "Snacks",
@@ -86,7 +86,7 @@ let products = {
             "img": "./imagens/snacks.png",
             "price": 7,
             "valor": 0,
-            "qntd": 0
+            "qntd": 1
         },
     ],
     "drinks": [{
@@ -96,7 +96,7 @@ let products = {
             "img": "./imagens/coca.jpg",
             "price": 7,
             "valor": 0,
-            "qntd": 0
+            "qntd": 1
         },
         {
             "section": "Bebidas",
@@ -105,7 +105,7 @@ let products = {
             "img": "./imagens/coca.jpg",
             "price": 10,
             "valor": 0,
-            "qntd": 0
+            "qntd": 1
         },
         {
             "section": "Bebidas",
@@ -114,7 +114,7 @@ let products = {
             "img": "./imagens/coca.jpg",
             "price": 12,
             "valor": 0,
-            "qntd": 0
+            "qntd": 1
         },
     ]
 }

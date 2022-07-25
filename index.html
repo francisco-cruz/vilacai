@@ -23,31 +23,32 @@
       <!-- background e foto do perfil -->
       <div class="perfil-bg">
         <img src="./imagens/bg-perfil.png" alt="plano de fundo" id="background-img">
-        <img src="./imagens/foto-perfil.jpeg" alt="foto do perfil" id="perfil-img">
       </div>
       <div class="text-info">
-        <div>
+        <div id="div-infos">
           <h1>Vilaçaí</h1>
-          <p id="store-status">Aberto</p>
+          <div class="div-info-store">
+            <div class="info-store">
+              <p id="store-status">● Aberto</p>
+                  <a  onclick="openModal()" class="items-link-info">
+                    <p id="link-info-store">Informações da loja</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-info">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                  </a>
+            </div>
+          </div>
           <p id="text-min-pedido">Pedido mínimo: <b>R$ 12,00</b><br>Obs: Exeto para o Freitas, pedido mínimo: <b>R$
               25,00</b></p>
         </div>
-        <div class="div-info-store">
-          <div class="info-store">
-            <a  onclick="openModal()" class="items-link-info">
-              <p id="link-info-store">Informações da loja</p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-info">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="16" x2="12" y2="12"></line>
-                <line x1="12" y1="8" x2="12.01" y2="8"></line>
-              </svg>
-            </a>
-          </div>
-        </div>
+        <img src="./imagens/foto-perfil.jpeg" alt="foto do perfil" id="perfil-img">
       </div>
     </header>
+
 
     <!--tabs -->
     <div class="tab">
@@ -108,6 +109,11 @@
       </div>
     </section>
     </div>
+
+     <!-- footer -->
+  <footer id="footer-page">
+    <p>Francisco Cruz 2022.</p>
+  </footer>
   </main>
 
   <!-- modal informações da loja -->
@@ -228,7 +234,7 @@
           
         </section>
 
-      <!-- footer -->
+      <!-- footer modal recheios -->
       <div class="footer">
         <div class="items-footer">
           <div class="btn-qtd-footer">
@@ -255,6 +261,7 @@
     </div>
   </div>
 
+  
   <!-- scripts -->
   <!-- banco de dados -->
   <script type="text/javascript" src="scripts/database.js"></script>

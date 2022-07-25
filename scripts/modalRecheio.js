@@ -65,14 +65,22 @@ function htmlContentModal(section, id) {
 
   let btnAddFooter = document.querySelector('#btn-add-footer')
   let btnMinusFooter = document.querySelector('#btn-minus-footer')
+
   data['value'] = (data['qntd']) * (data['price']);
 
+  document.querySelector('#text-qtd-footer').innerText = data['qntd']
+
   btnAddFooter.addEventListener('click', (event) => {
-    document.querySelector('.btn-continue').style.backgroundColor = '#FFCC59'
-    document.querySelector('.btn-continue').style.color = '#1C1C1C'
-    if ( data['qntd'] === 10)  {
+    
+    if ( data['qntd'] >= 10)  {
       event.preventDefault()
-    } if ( data['qntd'] >= 0 ) {
+    } else if ( data['qntd'] >=0 ) {
+      data['qntd']++
+      document.querySelector('#text-qtd-footer').innerText = data['qntd'];
+      document.querySelector('.btn-continue').style.backgroundColor = '#FFCC59'
+      document.querySelector('.btn-continue').style.color = '#1c1cc1'
+    } 
+    else {
       data['qntd']++
       document.querySelector('#text-qtd-footer').innerText = data['qntd'];
       console.log(data['qntd'])     
@@ -80,10 +88,15 @@ function htmlContentModal(section, id) {
   });
 
   btnMinusFooter.addEventListener('click', (event) => {
-    if (data['qntd'] === 0 ) {
+    if (data['qntd'] <= 0) {
       event.preventDefault()
       document.querySelector('.btn-continue').style.backgroundColor = '#FFE099'
       document.querySelector('.btn-continue').style.color = '#6D6D6C'
+    } else if (data['qntd'] <= 1) {
+      data['qntd']--
+      document.querySelector('.btn-continue').style.backgroundColor = '#FFE099'
+      document.querySelector('.btn-continue').style.color = '#6D6D6C'
+      document.querySelector('#text-qtd-footer').innerText = data['qntd']
     } else {
       data['qntd']--
       document.querySelector('#text-qtd-footer').innerText = data['qntd']
