@@ -15,7 +15,7 @@ function openModalRecheio(contentProduto) {
 
   // ABRE A SEÇÃO NO MODAL RECHEIO
 
-  openSectionModal (section)
+  getSectionModal (section, id)
 
   //GERA HTML DO CABEÇALHO DO MODAL RECHEIO
 
@@ -146,14 +146,20 @@ function btnContinueDesable (section, id) {
 
 // ABRIR SEÇÃO DE RECHEIO
 
-function openSectionModal (section) {
+function getSectionModal (section, id) {
+  let data = products[section][id]
+  console.log(data['section'])
 
-  let sectionIceCream = document.getElementById('ice-cream')
-  let sectionAcai = document.getElementById('acai')
+  if (data['section'] === 'Açaí') {
+    document.querySelector('#modal-acai').classList.add('section-active')
+    document.querySelector('#modal-ice-cream').classList.remove('section-active')
 
-  if (section == 'acai')
-    sectionAcai.classList.add('section-active')
+  }
 
-  if (section === 'ice-cream')
-    sectionIceCream.classList.add('section-active')
+  else if (data['section'] === 'Sorvetes') {
+    document.querySelector('#modal-acai').classList.remove('section-active')
+    document.querySelector('#modal-ice-cream').classList.add('section-active')
+
+  }
+
 }

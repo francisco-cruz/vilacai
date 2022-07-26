@@ -1,3 +1,5 @@
+// HORA DO SISTEMA
+
 function pegarHora(){
     const date = new Date().toLocaleTimeString();
     if (date <='18' || date > '22'){

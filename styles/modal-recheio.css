@@ -156,6 +156,7 @@
 
 .recheio {
     margin-top: 32px;
+    display: none;
 }
 
 .items-recheios {
@@ -247,4 +248,9 @@
 
 #btn-minus-footer {
     cursor: pointer;
+}
+
+
+.section-active {
+    display: block;
 }
