@@ -4,7 +4,6 @@ main {
     min-width: 1366px;
     min-height: 100vh;
     border-radius: 8px;;
-    margin-bottom: 64px;
     background-color: white;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.02);
     position: absolute;

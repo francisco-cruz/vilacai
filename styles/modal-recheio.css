@@ -25,7 +25,7 @@
 }
 
 .modal-recheio {
-    background-color: #F1EDF2;
+    background-color: white;
     width: 550px;
     height: 100vh;
     max-height: 100vh;
@@ -121,14 +121,14 @@
 }
 /* estilo da seção */
 .qtd-recheio {
-    background-color: white;
+    background-color: #F2F1EF;
     padding: 16px 0;
 }
 .qtd-recheio-geral {
     position: -webkit-sticky;
     position: sticky;
     top: 70px;
-    background-color: white;
+    background-color: #F2F1EF;
     padding: 16px 0;
 }
 
@@ -153,7 +153,7 @@
 
 .recheio {
     margin-top: 32px;
-    display: none;
+    
 }
 
 .items-recheios {

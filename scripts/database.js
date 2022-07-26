@@ -29,6 +29,36 @@ let products = {
             "qntd": 1,
             "qntd-additionais": 12
         },
+        {
+            "section": "Açaí",
+            "name": "Copo 700 ml",
+            "obs-product": "Até 12 adicionais",
+            "img": "./imagens/copo.jpeg",
+            "price": 18,
+            "valor": 0,
+            "qntd": 1,
+            "qntd-additionais": 12
+        },
+        {
+            "section": "Açaí",
+            "name": "Copo 700 ml",
+            "obs-product": "Até 12 adicionais",
+            "img": "./imagens/copo.jpeg",
+            "price": 18,
+            "valor": 0,
+            "qntd": 1,
+            "qntd-additionais": 12
+        },
+        {
+            "section": "Açaí",
+            "name": "Copo 700 ml",
+            "obs-product": "Até 12 adicionais",
+            "img": "./imagens/copo.jpeg",
+            "price": 18,
+            "valor": 0,
+            "qntd": 1,
+            "qntd-additionais": 12
+        },
     ],
     "ice-cream": [{
             "section": "Sorvetes",
