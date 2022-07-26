@@ -177,11 +177,11 @@
       </header>
       <div class="main-section">
         <!-- informações do produto selecionado -->
-        <div id="content-product">
+        <div id="content-product" data-section="" data-id="">
 
         </div>
         <!-- seção dos recheios do açaí -->
-        <section id="section-recheio-acai" class="recheio">
+        <section id="acai" class="recheio">
           <!-- contador de recheios -->
           <div class="qtd-recheio">
             <div class="items-qtd-recheio">
@@ -212,7 +212,7 @@
         </section>
 
         <!-- seção dos recheios dos sorvetes -->
-        <section id="section-recheio-icecream" class="recheio">
+        <section id="ice-cream" class="recheio">
           <!-- item -->
           <div class="item-recheio">
             <p>sorvete</p>
@@ -223,7 +223,9 @@
                 <line x1="12" y1="5" x2="12" y2="19"></line>
                 <line x1="5" y1="12" x2="19" y2="12"></line>
               </svg>
+
               <p>0</p>
+              
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-minus">
@@ -237,15 +239,15 @@
       <!-- footer modal recheios -->
       <div class="footer">
         <div class="items-footer">
-          <div class="btn-qtd-footer">
-            <svg id="btn-add-footer"  xmlns="http://www.w3.org/2000/svg" width="24"
+          <div class="btn-qtd-footer"> 
+            <svg id="btn-add-footer" onclick="" xmlns="http://www.w3.org/2000/svg" width="24"
               height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" class="feather feather-plus">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
             <p id="text-qtd-footer">0</p>
-            <svg id="btn-minus-footer" xmlns="http://www.w3.org/2000/svg" width="24"
+            <svg id="btn-minus-footer" onclick="" xmlns="http://www.w3.org/2000/svg" width="24"
               height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" class="feather feather-minus">
               <line x1="5" y1="12" x2="19" y2="12"></line>

@@ -148,7 +148,3 @@ let products = {
         },
     ]
 }
-
-for(i in products){
-    console.log(i);
-}

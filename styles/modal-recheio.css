@@ -156,7 +156,6 @@
 
 .recheio {
     margin-top: 32px;
-    
 }
 
 .items-recheios {
@@ -233,6 +232,13 @@
 .btn-continue p {
     font-weight: 600;
     font-size: 18px;
+}
+
+.btn-continue-disable {
+    background-color: #FFE099;
+    color: #6D6D6C;
+
+    pointer-events: none;
 }
 
 #btn-add-footer {

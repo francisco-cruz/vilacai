@@ -1,48 +1,67 @@
 function openModalRecheio(contentProduto) {
-  // variaveis com a section e id que estão no data-attributs do html
+
+  // variaveis que recebem  data-attributs
+
   const section = contentProduto.getAttribute("data-section")
   const id = contentProduto.getAttribute("data-id-product")
 
-  if (section === 'Açaí') {
-    document.querySelector('#section-recheio-acai').style.display = 'block'
-    document.querySelector('#section-recheio-icecream').style.display = 'none'
+  let data = products[section][id]
 
-  }
-  if (section === 'Sorvetes') {
-    document.querySelector('#section-recheio-icecream').style.display = 'block'
-    document.querySelector('#section-recheio-acai').style.display = 'none'
-  }
+  // função que abre a seção do modal recheio
 
-  //chamando função que pede dois paramentos com as variáveis criadas
+  openSectionModal (section)
+
+  //chamando função que gera html do cabeçalho
+
   htmlContentModal(section, id);
+
 
   let modal = document.querySelector('.bg-modal-recheio')
   modal.style.display = 'flex'
-  // tirar scroll do body
+
+    // tirar scroll do body
+
   let scroll = document.querySelector("html");
   scroll.style.overflow = "hidden"
 
+  // preço inicial no botão continuar
+
+  data['value'] = data['qntd'] * data['price']
+
+  document.querySelector('#text-qtd-footer').innerText = data['qntd']
+  document.querySelector('#price-total').innerText = 'R$ '+ data['value'] +',00'
+
 }
 
+
+// função para fechar o modal
+
 function closedModalRecheio() {
+
   let modal = document.querySelector('.bg-modal-recheio');
   modal.style.display = 'none'
+
   // colocar scroll no body
+
   let body = document.querySelector("html");
   body.style.overflow = "auto"
 
 }
 
 // função que retorna a section e id de products
+
 function getContentModal(section, id) {
   return products[section][id];
 }
 
 // função para adicionar html no modal com os paramentros section e id
+
 function htmlContentModal(section, id) {
-  // variavel que chama função que retorna o objeto
+
   let data = getContentModal(section, id);
-  // função que pega as informações
+
+  // criando html da seçao content no modal 
+
   let content = '<img class="img-modal-recheio" src="' + data["img"] + '" alt="">' +
     '<div class="line-product"> </div>'+
     '<div class="info-modal-recheio">' +
@@ -59,141 +78,77 @@ function htmlContentModal(section, id) {
     '</div>' +
     '</div>' +
     '</div>'
+
+  document.getElementById("btn-add-footer").setAttribute("onclick", `incrementQntd("${section}", ${id})`)
+  document.getElementById("btn-minus-footer").setAttribute("onclick", `decrementQntd("${section}", ${id})`)
+  
   document.getElementById('content-product').innerHTML = content
 
-  // botão quantidade footer
-  let btnAddFooter = document.querySelector('#btn-add-footer')
-  let btnMinusFooter = document.querySelector('#btn-minus-footer')
+}
 
-  let resultInButton = document.querySelector('#text-btn-continue')
+// função para incrementar a quantidade no modal
 
-  document.querySelector('#text-qtd-footer').innerText = data['qntd']
-  
-  data['value'] = data['price'] * data['qntd']
+function incrementQntd (section, id) {
 
-  resultInButton.innerText =' R$ '+ data['value']+ ',00'
-  console.log(data['qntd']);
-    // botão mais
-  btnAddFooter.addEventListener('click', (event) => {
+  let data = products[section][id]
+
+  if (data['qntd'] >= 0 && data['qntd'] < 10){
+    data['qntd']++
+    data['value'] = data['qntd'] * data['price']
+    btnContinueDesable (section, id)
+    document.querySelector('#text-qtd-footer').innerText = data['qntd']
+    document.querySelector('#price-total').innerText = 'R$ '+ data['value'] +',00'
    
-    if ( data['qntd'] >= 10 )  {
-      event.preventDefault()
-    } else if ( data['qntd'] >= 0 ) {
-      data['qntd']++
-  console.log(data['qntd']);
-
-      data['value'] = data['price'] * data['qntd']
-      resultInButton.innerText =' R$ '+ data['value']+ ',00'
-
-      document.querySelector('#text-qtd-footer').innerText = data['qntd'];
-
-      document.querySelector('.btn-continue').style.backgroundColor = '#FFCC59'
-      document.querySelector('.btn-continue').style.color = '#1C1C1C'
-    } 
-    else {
-      data['qntd']++
-      
-      data['value'] = data['price'] * data['qntd']
-
-      resultInButton.innerText =' R$ '+ data['value']+ ',00'
-
-      document.querySelector('#text-qtd-footer').innerText = data['qntd'];   
+  }
 }
-  });
-    // botão menos
-  btnMinusFooter.addEventListener('click', (event) => {
 
-    if ( data['qntd'] <= 0 ) {
-      event.preventDefault()
+// função para decrementar a quantidade no modal
 
-      document.querySelector('.btn-continue').style.backgroundColor = '#FFE099'
-      document.querySelector('.btn-continue').style.color = '#6D6D6C'
-    } else if ( data['qntd'] <= 1 ) {
-      data['qntd']--
-      data['value'] = data['price'] * data['qntd']
+function decrementQntd (section, id) {
 
-      resultInButton.innerText =' R$ '+ data['value']+ ',00'
+  let data = products[section][id]
 
-      document.querySelector('.btn-continue').style.backgroundColor = '#FFE099'
-      document.querySelector('.btn-continue').style.color = '#6D6D6C'
+  if (data['qntd'] > 0){
+    data['qntd']--
+    data['value'] = data['qntd'] * data['price']
 
-      document.querySelector('#text-qtd-footer').innerText = data['qntd']
-    } else {
-      data['qntd']--
-      data['value'] = data['price'] * data['qntd']
+    console.log(data['qntd'])
 
-      resultInButton.innerText =' R$ '+ data['value']+ ',00'
+    btnContinueDesable (section, id)
 
-      document.querySelector('#text-qtd-footer').innerText = data['qntd']
-    }
+    document.querySelector('#text-qtd-footer').innerText = data['qntd']
+    document.querySelector('#price-total').innerText ='R$ '+ data['value'] +',00'
+    
+
+  }
+}
+
+
+function btnContinueDesable (section, id) {
+  let data = products[section][id]
+
+  if (data['qntd'] === 0) {
+    document.querySelector('.btn-continue').classList.add('btn-continue-disable')
+    return
+  }
+   
+   document.querySelector('.btn-continue').classList.remove('btn-continue-disable') 
   
-  });
-
 }
 
 
 
 
-// função botão quantidade footer
+// função para abrir seção de recheio conforme a section passada 
 
+function openSectionModal (section) {
 
+  let sectionIceCream = document.getElementById('ice-cream')
+  let sectionAcai = document.getElementById('acai')
 
+  if (section == 'acai')
+    sectionAcai.classList.add('section-active')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// conteudo do modal
-function contentModal() {
-  for (i in products)
-    console.log(i);
-}
-// somar
-function buttonAddFooter() {
-
-  if (qntdProdutoReal === 10) {
-    document.querySelector('#btn-add-footer').ddEventListener('click', (event) => {
-      event.preventDefault();
-    });
-  } else {
-    qntdProdutoReal += 1;
-    price2 = qntdProdutoReal * price2;
-    priceText.innerText = "R$ " + price2 + ",00";
-  }
-}
-//  diminuir
-function buttonMinusFooter() {
-  if (qntdProdutoReal === 0) {
-    document.querySelector('#btn-minus-footer').ddEventListener('click', (event) => {
-      event.preventDefault();
-    });
-  } else {
-    qntdProdutoReal -= 1;
-    price2 = qntdProdutoReal * price2;
-    priceText.innerText = "R$ " + price2 + ",00";
-  }
+  if (section === 'ice-cream')
+    sectionIceCream.classList.add('section-active')
 }
