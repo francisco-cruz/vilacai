@@ -1,3 +1,5 @@
+// HTML DOS PRODUTOS
+
 for ( i in products ) {
     for ( j in products[i] ){
             let produto = '<div class="product" onclick="openModalRecheio(this)" data-section="' + i + '" data-id-product="' + j + '" >'+
@@ -12,5 +14,3 @@ for ( i in products ) {
             document.getElementById(i).children[1].innerHTML += produto;
     }
 }
-
-// salvar em data-attributes os atributos name, price, qntd-addionais, section e obs-product

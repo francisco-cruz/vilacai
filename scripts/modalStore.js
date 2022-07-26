@@ -1,17 +1,22 @@
+// ABRIR MODAL MAIS INFORMAÇÕES
+
 function openModal() {
    let modal = document.querySelector('.bg-modal-store');
    modal.style.display = 'flex';
 
-   // tirar scroll da tela
+   // DESATIVAR SCROLL
    let body = document.querySelector("html");
    body.style.overflow = "hidden";
 }
+
+// FECHAR MODAL MAIS INFORMAÇÕES
 
 function closedModal() {
    let modal = document.querySelector('.bg-modal-store');
    modal.style.display = 'none';
 
-   // colocar scroll na tela
+   // ATIVAR SCROLL
+
    let body = document.querySelector("html");
    body.style.overflow = "auto";
 }

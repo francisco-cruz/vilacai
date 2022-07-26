@@ -1,30 +1,36 @@
 function openModalRecheio(contentProduto) {
 
-  // variaveis que recebem  data-attributs
+  // DATA-ATTRIBUTS DOS PRODUTOS
 
   const section = contentProduto.getAttribute("data-section")
   const id = contentProduto.getAttribute("data-id-product")
 
+  // RECEBE O OBJETO PRODUCTS
+
   let data = products[section][id]
 
-  // função que abre a seção do modal recheio
+  // SETAR A QAUNTIDADE DO PRODUTO NA FUNÇÃO DESATIVAR BOTÃO QUANTIDADE DO MODAL RECHEIO
+
+  btnContinueDesable (section, id)
+
+  // ABRE A SEÇÃO NO MODAL RECHEIO
 
   openSectionModal (section)
 
-  //chamando função que gera html do cabeçalho
+  //GERA HTML DO CABEÇALHO DO MODAL RECHEIO
 
   htmlContentModal(section, id);
 
-
+  // MOSTRA MODAL RECHEIO
   let modal = document.querySelector('.bg-modal-recheio')
   modal.style.display = 'flex'
 
-    // tirar scroll do body
+    // DESATIVAR SCROLL
 
   let scroll = document.querySelector("html");
   scroll.style.overflow = "hidden"
 
-  // preço inicial no botão continuar
+  // PREÇO INICIAL DO BOTÃO CONTINUAR
 
   data['value'] = data['qntd'] * data['price']
 
@@ -34,33 +40,33 @@ function openModalRecheio(contentProduto) {
 }
 
 
-// função para fechar o modal
+// FECHAR MODAL
 
 function closedModalRecheio() {
 
   let modal = document.querySelector('.bg-modal-recheio');
   modal.style.display = 'none'
 
-  // colocar scroll no body
+  // COLOCAR SCROLL 
 
   let body = document.querySelector("html");
   body.style.overflow = "auto"
 
 }
 
-// função que retorna a section e id de products
+// RETORNA A SEÇÃO E O ID DE CADA PRODUTO
 
 function getContentModal(section, id) {
   return products[section][id];
 }
 
-// função para adicionar html no modal com os paramentros section e id
+// GERA HTML DO MODAL RECHEIO
 
 function htmlContentModal(section, id) {
 
   let data = getContentModal(section, id);
 
-  // criando html da seçao content no modal 
+  // GERA HTML DA DIV CONTENT DO MODAL RECHEIO
 
   let content = '<img class="img-modal-recheio" src="' + data["img"] + '" alt="">' +
     '<div class="line-product"> </div>'+
@@ -86,7 +92,7 @@ function htmlContentModal(section, id) {
 
 }
 
-// função para incrementar a quantidade no modal
+// INCREMENTAR VALOR EM BOTÃO CONTINUE
 
 function incrementQntd (section, id) {
 
@@ -102,7 +108,7 @@ function incrementQntd (section, id) {
   }
 }
 
-// função para decrementar a quantidade no modal
+// DECREMENTAR VALOR EM BOTÇAO CONTINUE
 
 function decrementQntd (section, id) {
 
@@ -123,6 +129,7 @@ function decrementQntd (section, id) {
   }
 }
 
+// DESABILITA O BOTÃO CONTINUE 
 
 function btnContinueDesable (section, id) {
   let data = products[section][id]
@@ -137,9 +144,7 @@ function btnContinueDesable (section, id) {
 }
 
 
-
-
-// função para abrir seção de recheio conforme a section passada 
+// ABRIR SEÇÃO DE RECHEIO
 
 function openSectionModal (section) {
 

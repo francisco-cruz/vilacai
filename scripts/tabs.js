@@ -1,13 +1,17 @@
+//ABRIR TAB
+
 function openTab(event, idTab) {
   addDisplayNoneToAllTabs();
   removeActiveToBtnTab();
   addActiveToBtnTab(event, idTab);
 }
 
-// click automatico no botão açai
+// CLICK AUTOMATICO NO BOTAO AÇAÍ
+
 document.getElementById('tab-default').click();
 
-// removendo todas as seções da tela
+// REMOVE TODAS AS SEÇÕES DA TELA
+
 function addDisplayNoneToAllTabs(){
   let section = document.getElementsByClassName('products-section');
   for (let i = 0; i < section.length; i++){
@@ -15,7 +19,8 @@ function addDisplayNoneToAllTabs(){
   }
 }
 
-// função para remover a classe active de todos os boões da tab
+// REMOVE A CLASS ACTIVE DOS BOTÇÕES
+
 function removeActiveToBtnTab(){
   let tabs = document.getElementsByClassName('tab-button');
   for (let i = 0; i < tabs.length; i++){
@@ -23,7 +28,8 @@ function removeActiveToBtnTab(){
   }
 }
 
-// fução para adicionar a class active nos btões apartir de um evento que recebe o id da seção
+// ADICIONAR CLASS ACTIVE ESPERANDO UM EVENT E O ID DA SEÇÃO
+
 function addActiveToBtnTab(event, idTab){
   document.getElementById(idTab).style.display = 'block';
   event.currentTarget.classList.add("active");
