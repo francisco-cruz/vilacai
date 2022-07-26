@@ -64,54 +64,67 @@ function htmlContentModal(section, id) {
   // botão quantidade footer
   let btnAddFooter = document.querySelector('#btn-add-footer')
   let btnMinusFooter = document.querySelector('#btn-minus-footer')
+
   let resultInButton = document.querySelector('#text-btn-continue')
 
-
   document.querySelector('#text-qtd-footer').innerText = data['qntd']
-  data['value'] = data['price'] * data['qntd']
-  resultInButton.innerText =' R$ '+ data['value']+ ',00'
   
+  data['value'] = data['price'] * data['qntd']
+
+  resultInButton.innerText =' R$ '+ data['value']+ ',00'
+  console.log(data['qntd']);
     // botão mais
   btnAddFooter.addEventListener('click', (event) => {
-    
-    if ( data['qntd'] >= 10)  {
+   
+    if ( data['qntd'] >= 10 )  {
       event.preventDefault()
-    } else if ( data['qntd'] >=0 ) {
+    } else if ( data['qntd'] >= 0 ) {
       data['qntd']++
+  console.log(data['qntd']);
+
       data['value'] = data['price'] * data['qntd']
       resultInButton.innerText =' R$ '+ data['value']+ ',00'
+
       document.querySelector('#text-qtd-footer').innerText = data['qntd'];
+
       document.querySelector('.btn-continue').style.backgroundColor = '#FFCC59'
       document.querySelector('.btn-continue').style.color = '#1C1C1C'
     } 
     else {
       data['qntd']++
+      
       data['value'] = data['price'] * data['qntd']
+
       resultInButton.innerText =' R$ '+ data['value']+ ',00'
-      document.querySelector('#text-qtd-footer').innerText = data['qntd'];
-      console.log(data['qntd'])     
+
+      document.querySelector('#text-qtd-footer').innerText = data['qntd'];   
 }
   });
     // botão menos
   btnMinusFooter.addEventListener('click', (event) => {
-    if (data['qntd'] <= 0) {
+
+    if ( data['qntd'] <= 0 ) {
       event.preventDefault()
+
       document.querySelector('.btn-continue').style.backgroundColor = '#FFE099'
       document.querySelector('.btn-continue').style.color = '#6D6D6C'
-    } else if (data['qntd'] <= 1) {
+    } else if ( data['qntd'] <= 1 ) {
       data['qntd']--
       data['value'] = data['price'] * data['qntd']
+
       resultInButton.innerText =' R$ '+ data['value']+ ',00'
+
       document.querySelector('.btn-continue').style.backgroundColor = '#FFE099'
       document.querySelector('.btn-continue').style.color = '#6D6D6C'
+
       document.querySelector('#text-qtd-footer').innerText = data['qntd']
     } else {
       data['qntd']--
       data['value'] = data['price'] * data['qntd']
+
       resultInButton.innerText =' R$ '+ data['value']+ ',00'
+
       document.querySelector('#text-qtd-footer').innerText = data['qntd']
-      console.log(data['qntd'])
-      
     }
   
   });
