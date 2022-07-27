@@ -11,11 +11,11 @@ function openModalRecheio(contentProduto) {
 
   // SETAR A QAUNTIDADE DO PRODUTO NA FUNÇÃO DESATIVAR BOTÃO QUANTIDADE DO MODAL RECHEIO
 
-  btnContinueDesable (section, id)
+  btnContinueDesable(section, id)
 
   // ABRE A SEÇÃO NO MODAL RECHEIO
 
-  openSectionInModal (section, id)
+  openSectionInModal(section, id)
 
   //GERA HTML DO CABEÇALHO DO MODAL RECHEIO
 
@@ -25,7 +25,7 @@ function openModalRecheio(contentProduto) {
   let modal = document.querySelector('.bg-modal-recheio')
   modal.style.display = 'flex'
 
-    // DESATIVAR SCROLL
+  // DESATIVAR SCROLL
 
   let scroll = document.querySelector("html");
   scroll.style.overflow = "hidden"
@@ -35,8 +35,9 @@ function openModalRecheio(contentProduto) {
   data['value'] = data['qntd'] * data['price']
 
   document.querySelector('#text-qtd-footer').innerText = data['qntd']
-  document.querySelector('#price-total').innerText = 'R$ '+ data['value'] +',00'
+  document.querySelector('#price-total').innerText = 'R$ ' + data['value'] + ',00'
 
+  incrementQntdRecheio(section, id)
 }
 
 
@@ -69,106 +70,128 @@ function htmlContentModal(section, id) {
   // GERA HTML DA DIV CONTENT DO MODAL RECHEIO
 
   let content = '<img class="img-modal-recheio" src="' + data["img"] + '" alt="">' +
-    '<div class="line-product"> </div>'+
     '<div class="info-modal-recheio">' +
     '<p class="section-modal-recheio">' + data["section"] + '</p>' +
     '<h1 class="name-modal-recheio">' + data["name"] + '</h1>' +
     '<p class="price-modal-recheio">' + 'R$ ' + data["price"] + ',00' + '</p>' +
     '<p class="obs-modal-recheio">' + data["obs-product"] + '</p>' +
-    '</div>' +
-    '<div class="qtd-recheio-geral">' +
+    '</div>'
+
+    let contentqntd =
     '<div class="items-qtd-recheio">' +
     '<p class="title-qtd-recheio">Adicionais</p>' +
     '<div class="items-cont-recheio">' +
-    '<p class="cont-qtd-recheio">0 de ' + data['qntd-additionais'] + '</p>' +
+    '<p id ="text-cont-additionais" class="cont-qtd-recheio">0&nbsp;</p>' +
+    '<p class="cont-qtd-recheio">de&nbsp;' + data['qntd-additionais'] + '</p>' +
     '</div>' +
     '</div>' +
     '</div>'
 
+  document.getElementById('content-product').innerHTML = content
+  document.getElementById('content-qndt').innerHTML = contentqntd
+
   document.getElementById("btn-add-footer").setAttribute("onclick", `incrementQntd("${section}", ${id})`)
   document.getElementById("btn-minus-footer").setAttribute("onclick", `decrementQntd("${section}", ${id})`)
-  
-  document.getElementById('content-product').innerHTML = content
-
 }
 
 // INCREMENTAR VALOR EM BOTÃO CONTINUE
 
-function incrementQntd (section, id) {
+function incrementQntd(section, id) {
 
   let data = products[section][id]
 
-  if (data['qntd'] >= 0 && data['qntd'] < 10){
+  if (data['qntd'] >= 0 && data['qntd'] < 10) {
     data['qntd']++
     data['value'] = data['qntd'] * data['price']
-    btnContinueDesable (section, id)
+    btnContinueDesable(section, id)
     document.querySelector('#text-qtd-footer').innerText = data['qntd']
-    document.querySelector('#price-total').innerText = 'R$ '+ data['value'] +',00'
-   
+    document.querySelector('#price-total').innerText = 'R$ ' + data['value'] + ',00'
+
   }
 }
 
 // DECREMENTAR VALOR EM BOTÇAO CONTINUE
 
-function decrementQntd (section, id) {
+function decrementQntd(section, id) {
 
   let data = products[section][id]
 
-  if (data['qntd'] > 0){
+  if (data['qntd'] > 0) {
     data['qntd']--
     data['value'] = data['qntd'] * data['price']
 
     console.log(data['qntd'])
 
-    btnContinueDesable (section, id)
+    btnContinueDesable(section, id)
 
     document.querySelector('#text-qtd-footer').innerText = data['qntd']
-    document.querySelector('#price-total').innerText ='R$ '+ data['value'] +',00'
-    
+    document.querySelector('#price-total').innerText = 'R$ ' + data['value'] + ',00'
+
 
   }
 }
 
+// IMCREMENTAR EM QUANTIDADE TOTAL DE RECHEIOS
+
+function incrementQntdRecheio(section, id) {
+
+  let data = products[section][id]
+
+  let textCont = document.getElementById('text-cont-additionais');
+  let textContTotal= parseInt(textCont)
+
+  if (textContTotal < data['qntd-additionais']) {
+      textContTotal++
+      textContTotal.innerText = textContTotal
+    
+  console.log(textContTotal)
+
+  }
+}
+
+
+
+
+
+
 // DESABILITA O BOTÃO CONTINUE 
 
-function btnContinueDesable (section, id) {
+function btnContinueDesable(section, id) {
   let data = products[section][id]
 
   if (data['qntd'] === 0) {
     document.querySelector('.btn-continue').classList.add('btn-continue-disable')
     return
   }
-   
-   document.querySelector('.btn-continue').classList.remove('btn-continue-disable') 
-  
+
+  document.querySelector('.btn-continue').classList.remove('btn-continue-disable')
+
 }
 
 
 // ABRIR SEÇÃO DE RECHEIO
 
-function openSectionInModal (section, id) {
+function openSectionInModal(section, id) {
 
   let data = products[section][id]
 
   if (data['section'] === 'Açaí') {
+
     document.querySelector('#modal-acai').classList.add('section-active')
     document.querySelector('#modal-ice-cream').classList.remove('section-active')
+    
+  } else if (data['section'] === 'Sorvetes') {
 
-  }
-
-  else if (data['section'] === 'Sorvetes') {
     document.querySelector('#modal-acai').classList.remove('section-active')
     document.querySelector('#modal-ice-cream').classList.add('section-active')
 
-  }
+  } else if (data['section'] === 'Snacks') {
 
-  else if (data['section'] === 'Snacks') {
     document.querySelector('#modal-acai').classList.remove('section-active')
     document.querySelector('#modal-ice-cream').classList.remove('section-active')
 
-  }
+  } else if (data['section'] === 'Bebidas') {
 
-  else if (data['section'] === 'Bebidas') {
     document.querySelector('#modal-acai').classList.remove('section-active')
     document.querySelector('#modal-ice-cream').classList.remove('section-active')
 

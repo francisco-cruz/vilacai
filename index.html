@@ -30,9 +30,10 @@
           <h1>Vilaçaí</h1>
           <div class="div-info-store">
             <div class="info-store">
-              <p id="store-status">● Aberto</p>
+              <p id="store-status">Aberto</p>
               <a onclick="openModal()" class="items-link-info">
-                <p id="link-info-store">Informações da loja</p>
+                <p>•&nbsp;</p>
+                <p id="link-info-store"> Informações da loja</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                   class="feather feather-info">
@@ -177,8 +178,8 @@
       </header>
       <div class="main-section">
         <!-- informações do produto selecionado -->
-        <div id="content-product" data-section="" data-id="">
-        </div>
+        <div id="content-product" data-section="" data-id=""></div>
+        <div id="content-qndt" class="qtd-recheio-geral"> </div>
 
         <!-- seção dos recheios do açaí -->
         <section id="modal-acai" class="recheio">
@@ -250,7 +251,6 @@
       </section>
 
 
-
       <!-- footer modal recheios -->
       <div class="footer">
         <div class="items-footer">
@@ -269,7 +269,7 @@
             </svg>
           </div>
           <div class="btn-continue">
-            <p>Continuar&nbsp;</p>
+            <p>Continue&nbsp;</p>
             <p id="text-btn-continue"></p>
             <p id="price-total"></p>
           </div>
@@ -279,11 +279,10 @@
     </div>
   </div>
 
-
   <!-- scripts -->
   <!-- banco de dados -->
   <script type="text/javascript" src="scripts/database.js"></script>
-  <script type="text/javascript" src="scripts/recheios.js"></script>
+  
   <!-- botões tab -->
   <script type="text/javascript" src="scripts/tabs.js"></script>
   <!-- verificar se está aberto ou fechado -->
