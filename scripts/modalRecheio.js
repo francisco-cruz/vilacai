@@ -5,9 +5,28 @@ function openModalRecheio(contentProduto) {
   const section = contentProduto.getAttribute("data-section")
   const id = contentProduto.getAttribute("data-id-product")
 
+  let data = products[section][id]
+
+  // Fazer funcao
+  // if (!qntdRecheios[section])
+    // qntdRecheios.add(section, {
+    //   "id": id,
+    //   "name": data["name"],
+    //   "qntd": 0
+    // });
+
+    // qntdRecheios.
+    // qntdRecheios.set(section, {"id": id, "name": data['name'], "qntd": 0})
+    
+    // qntdRecheios.put(section, {
+    //   "id": id,
+    //   "name": data['name'],
+    //   "qntd": 0
+    // }
+
   // RECEBE O OBJETO PRODUCTS
 
-  let data = products[section][id]
+ 
 
   // SETAR A QAUNTIDADE DO PRODUTO NA FUNÇÃO DESATIVAR BOTÃO QUANTIDADE DO MODAL RECHEIO
 
@@ -37,7 +56,7 @@ function openModalRecheio(contentProduto) {
   document.querySelector('#text-qtd-footer').innerText = data['qntd']
   document.querySelector('#price-total').innerText = 'R$ ' + data['value'] + ',00'
 
-  incrementQntdRecheio(section, id)
+  // incrementQntdRecheio(section, id)
 }
 
 
@@ -133,14 +152,37 @@ function decrementQntd(section, id) {
 
 // IMCREMENTAR EM QUANTIDADE TOTAL DE RECHEIOS
 
-function incrementQntdRecheio(section, id) {
+function incrementQntdRecheio(object, sectionProduct, idProduct) {
+  let section = object.getAttribute("data-recheio")
+  let id = Number(object.getAttribute("data-id"))
+  // console.log(`${products[section][id]}`)
 
-  let data = products[section][id]
+  // console.log(recheios[section][id])
 
-  let textCont = document.getElementById('text-cont-additionais');
-  let textContTotal= parseInt(textCont)
+  let recheio = recheios[section][id]
 
-  if (textContTotal < data['qntd-additionais']) {
+  let produto = products[sectionProduct][idProduct]
+
+  console.log(qntdRecheios)
+
+  // let textCont = document.getElementById('text-cont-additionais');
+  // let textContTotal= textCont.value
+
+  let qntdRecheioProduto = qntdRecheios[sectionProduct]
+
+  for (i in qntdRecheioProduto){
+    console.log(qntdRecheioProduto)
+  }
+
+  return
+  // let qntdRecheioProduto = qntdRecheios[sectionProduct][idProduct]
+
+  console.log(`QNTD: ${textContTotal}`)
+
+  console.log(`PRODUTO: ${produto["name"]}`)
+  
+  if (textContTotal < produto['qntd-additionais']) {
+    console.log(`PRODUTO: ${produto}`)
       textContTotal++
       textContTotal.innerText = textContTotal
     
@@ -179,7 +221,10 @@ function openSectionInModal(section, id) {
 
     document.querySelector('#modal-acai').classList.add('section-active')
     document.querySelector('#modal-ice-cream').classList.remove('section-active')
-    
+    gerarRecheiosFruits('fruits', section, id)
+    gerarRecheiosCreams('creams', section, id)
+    gerarRecheiosFillings('fillings', section, id)
+
   } else if (data['section'] === 'Sorvetes') {
 
     document.querySelector('#modal-acai').classList.remove('section-active')

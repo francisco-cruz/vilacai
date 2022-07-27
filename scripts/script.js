@@ -16,6 +16,7 @@ for ( i in products ) {
 }
 
 // HTML DOS RECHEIOS AÇAI
+
     let btnAddRecheio = `<svg class="btn-add-recheio-page" onclick="incrementQntdRecheio()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         class="feather feather-plus">
@@ -27,9 +28,7 @@ for ( i in products ) {
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         class="feather feather-minus">
         <line x1="5" y1="12" x2="19" y2="12"></line>
-        </svg>
-        </div>
-        </div>`
+        </svg>`
 
     let textButton = '<p>0</p>'
 
@@ -37,18 +36,41 @@ for ( i in products ) {
     
     // FUNÇÕES QUE COLOCAM OS ITENS NA SEÇÃO
 
-function gerarRecheiosFruits(recheio) {
+function gerarRecheiosFruits(recheio, section, id) {
     let recheiosDaSecao = recheios[recheio]
     for ( j in  recheiosDaSecao) {
-        let recheio =   `<div class="item-recheio">
+        let recheioData =  `<div class="item-recheio">
             <p>${recheiosDaSecao[j]['name']}</p>
             <div class="btn-quantidade">
 
-            ${textQntdRecheio}`
+            <svg class="btn-add-recheio-page" id="btn-add-recheio-page" onclick="incrementQntdRecheio(this, '${section}', ${id})" data-recheio="fruits" data-id="${j}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-plus">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
 
-            document.getElementById('items-recheios-fruits').innerHTML += recheio;   
+            <p>0</p>
+            
+            <svg class="btn-minus-recheio-page" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-minus">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            
+            </div>
+            </div>`
+
+            document.getElementById('items-recheios-fruits').innerHTML += recheioData;   
     }
 }
+
+// function addQntdRecheio(section, id){
+//     console.log(`SECTION: ${section} ID: ${id}`)
+// }
+
+
+
 
 function gerarRecheiosCreams(recheio) {
     let recheiosDaSecao = recheios[recheio]
@@ -78,9 +100,8 @@ function gerarRecheiosFillings(recheio) {
 
     // CHAMADA
 
-    gerarRecheiosFruits('fruits')
-    gerarRecheiosCreams('creams')
-    gerarRecheiosFillings('fillings')
+    // gerarRecheiosCreams('creams')
+    // gerarRecheiosFillings('fillings')
 
 // HTML DOS RECHEIOS DOS SORVETES
 
