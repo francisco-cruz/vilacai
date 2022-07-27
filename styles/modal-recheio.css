@@ -1,17 +1,4 @@
-/* .closed-modal {
-    animation: closedModalRecheio 6s ease-in-out;
-} */
-/* animação de saída */
-@keyframes closedModalRecheio  {
-    0% {
-        position: absolute;
-        right: 0;
-    }
-    100% {
-        right: -500px;
-    }
-    
-}
+
 .bg-modal-recheio{
     background-color: rgba(0, 0, 0, .3);
     width: 100vw;

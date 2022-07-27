@@ -148,3 +148,128 @@ let products = {
         },
     ]
 }
+
+
+// DATA BASE RECHEIOS   
+
+let recheios = {
+    "frutas": [ {
+                "name": "Morango",
+                "qntd": 0,
+            },
+            {
+                "name": "Banana",
+                "qntd": 0,
+            },
+            {
+                "name": "Kiwi",
+                "qntd": 0,
+            },
+            {
+                "name": "Uva",
+                "qntd": 0,
+            },
+    ],
+
+    "cremes": [ {
+                "name": "Cupuaçu",
+                "qntd": 0,
+            },
+            {
+                "name": "Creme de ninho",
+                "qntd": 0,
+            },
+            {
+                "name": "Creme de guaraná",
+                "qntd": 0,
+            },
+            {
+                "name": "Creme de morango",
+                "qntd": 0,
+            },
+            {
+                "name": "Creme de pitanga",
+                "qntd": 0,
+            },
+        ],
+
+        "secos": [ {
+            "name": "Disqueti",
+            "qntd": 0,
+        },
+        {
+            "name": "Choco power",
+            "qntd": 0,
+        },
+        {
+            "name": "Choco ball",
+            "qntd": 0,
+        },
+        {
+            "name": "Gotinhas de chocolate",
+            "qntd": 0,
+        },
+        {
+            "name": "Granulado colorido",
+            "qntd": 0,
+        },
+        {
+            "name": "Amendoim granulado",
+            "qntd": 0,
+        },
+        {
+            "name": "Amendoin torrado",
+            "qntd": 0,
+        },
+        {
+            "name": "Castanha granulada",
+            "qntd": 0,
+        },
+        {
+            "name": "Granola",
+            "qntd": 0,
+        },
+        {
+            "name": "Paçoquinha",
+            "qntd": 0,
+        },
+        {
+            "name": "Flocos de arroz",
+            "qntd": 0,
+        },
+        {
+            "name": "Farinha láctea",
+            "qntd": 0,
+        },
+        {
+            "name": "Leite em pó",
+            "qntd": 0,
+        },
+        {
+            "name": "Leite condensado",
+            "qntd": 0,
+        },
+        {
+            "name": "Creme de avelã",
+            "qntd": 0,
+        },
+        {
+            "name": "Creme de oreo",
+            "qntd": 0,
+        },
+        {
+            "name": "Pasta de amendoin",
+            "qntd": 0,
+        },
+        {
+            "name": "Calda zerada, choco. tradicional",
+            "qntd": 0,
+        },
+        {
+            "name": "Calda zerada, choco. branco",
+            "qntd": 0,
+        },
+      
+    ],
+
+}
