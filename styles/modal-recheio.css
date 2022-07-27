@@ -21,7 +21,7 @@
     justify-content: flex-start;  
     position: absolute;
     animation: openModalRecheio .5s ease-in-out;
-    overflow-y: scroll;
+   
 }
 
 .main-section {
@@ -125,6 +125,7 @@
 .title-qtd-recheio {
     font-size: 15px;
     font-weight: 600;
+    margin-left: 16px;
 }
 
 .cont-qtd-recheio {
@@ -150,7 +151,6 @@
     background-color: #522E73;
     padding-top: 1px;
     padding-bottom: 24px;
-    margin-bottom: 100px;
 }
 
 .item-recheio {
@@ -240,4 +240,25 @@
 
 .section-active {
     display: block;
+}
+
+#type-acai {
+    display: flex;
+    flex-direction: column;
+}
+
+.acai-radio {
+    background-color: #522E73;
+    color: white;
+    font-family: sans-serif;
+}
+
+#acai-tradicional {
+    margin-top: 24px;
+    margin-left: 16px;
+}
+#acai-cremoso {
+    margin-bottom: 24px;
+    margin-top: 24px;
+    margin-left: 16px;
 }

@@ -31,16 +31,16 @@
           <div class="div-info-store">
             <div class="info-store">
               <p id="store-status">● Aberto</p>
-                  <a  onclick="openModal()" class="items-link-info">
-                    <p id="link-info-store">Informações da loja</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                      class="feather feather-info">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="12" y1="16" x2="12" y2="12"></line>
-                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                    </svg>
-                  </a>
+              <a onclick="openModal()" class="items-link-info">
+                <p id="link-info-store">Informações da loja</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-info">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+              </a>
             </div>
           </div>
           <p id="text-min-pedido">Pedido mínimo: <b>R$ 12,00</b><br>Obs: Exeto para o Freitas, pedido mínimo: <b>R$
@@ -111,9 +111,9 @@
     </section>
     </div>
     <!-- footer page -->
-  <footer id="footer-page">
-    <p>Francisco Cruz 2022.</p>
-  </footer>
+    <footer id="footer-page">
+      <p>Francisco Cruz 2022.</p>
+    </footer>
   </main>
 
   <!-- modal informações da loja -->
@@ -178,91 +178,99 @@
       <div class="main-section">
         <!-- informações do produto selecionado -->
         <div id="content-product" data-section="" data-id="">
-
         </div>
+
         <!-- seção dos recheios do açaí -->
         <section id="modal-acai" class="recheio">
+
+           <!-- tipo do açai -->
+        <div id="type-acai">
+          <div class="qtd-recheio">
+            <p class="title-qtd-recheio">Tipo</p>
+          </div>
+          <idiv class="acai-radio">
+
+            <input id="acai-tradicional" type="radio">
+            <label for="acai-tradicional">Açaí tradicional</label>
+          </idiv>
+          <div class="acai-radio">
+
+            <input id="acai-cremoso" type="radio">
+            <label for="acai-cremoso">Açaí cremoso</label>
+          </div>
+        </div>
+
           <!-- contador de recheios -->
           <div class="qtd-recheio">
-            <div class="items-qtd-recheio">
-              <p class="title-qtd-recheio">acai</p>
-            </div>
+            <p class="title-qtd-recheio">Frutas</p>
           </div>
           <!-- recheios -->
-          <div class="items-recheios">
+          <div id="items-recheios-fruits" class="items-recheios">
             <!-- item -->
-            <div class="item-recheio">
-              <p>Disqueti</p>
-              <div class="btn-quantidade">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-plus">
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-                <p>0</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-minus">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-              </div>
-            </div>
+          </div>
+          <div class="qtd-recheio">
+            <p class="title-qtd-recheio">Cremes</p>
+          </div>
+          <div id="items-recheios-creams" class="items-recheios">
+            <!-- item -->
+          </div>
+          <div class="qtd-recheio">
+            <p class="title-qtd-recheio">Secos</p>
+          </div>
+          <div id="items-recheios-fillings" class="items-recheios">
+            <!-- item -->
           </div>
         </section>
 
-        <!-- seção dos recheios do açaí -->
+        <!-- seção dos recheios dos sorvetes -->
         <section id="modal-ice-cream" class="recheio">
-          <!-- contador de recheios -->
           <div class="qtd-recheio">
-            <div class="items-qtd-recheio">
-              <p class="title-qtd-recheio">sorvete</p>
-            </div>
+            <p class="title-qtd-recheio">Sabores</p>
           </div>
           <!-- recheios -->
-          <div class="items-recheios">
+          <div id="items-recheios-flavors" class="items-recheios">
             <!-- item -->
-            <div class="item-recheio">
-              <p>Disqueti</p>
-              <div class="btn-quantidade">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-plus">
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-                <p>0</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-minus">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-              </div>
-            </div>
           </div>
-        </section>
+          <div class="qtd-recheio">
+            <p class="title-qtd-recheio">Recheios</p>
+          </div>
+          <!-- recheios -->
+          <div id="items-recheios-fillings-icecream" class="items-recheios">
+            <!-- item -->
+          </div>
+          <div class="qtd-recheio">
+            <p class="title-qtd-recheio">Coberturas</p>
+          </div>
+          <!-- recheios -->
+          <div id="items-recheios-toppings" class="items-recheios">
+            <!-- item -->
+          </div>
 
-        
+      </div>
+      </section>
+
+
 
       <!-- footer modal recheios -->
       <div class="footer">
         <div class="items-footer">
-          <div class="btn-qtd-footer"> 
-            <svg id="btn-add-footer" onclick="" xmlns="http://www.w3.org/2000/svg" width="24"
-              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          <div class="btn-qtd-footer">
+            <svg id="btn-add-footer" onclick="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" class="feather feather-plus">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
             <p id="text-qtd-footer">0</p>
-            <svg id="btn-minus-footer" onclick="" xmlns="http://www.w3.org/2000/svg" width="24"
-              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            <svg id="btn-minus-footer" onclick="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" class="feather feather-minus">
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
           </div>
           <div class="btn-continue">
-            <p>Continuar&nbsp;</p><p id="text-btn-continue"></p>
+            <p>Continuar&nbsp;</p>
+            <p id="text-btn-continue"></p>
             <p id="price-total"></p>
           </div>
 
@@ -271,10 +279,11 @@
     </div>
   </div>
 
-  
+
   <!-- scripts -->
   <!-- banco de dados -->
   <script type="text/javascript" src="scripts/database.js"></script>
+  <script type="text/javascript" src="scripts/recheios.js"></script>
   <!-- botões tab -->
   <script type="text/javascript" src="scripts/tabs.js"></script>
   <!-- verificar se está aberto ou fechado -->
