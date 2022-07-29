@@ -132,3 +132,14 @@ function gerarRecheiosToppings(recheio) {
     }
 }
 
+// BOTÃO PARA VOLTAR AO TOPO
+let btnBackToTop = document.querySelector('.btn-back-top');
+
+btnBackToTop.addEventListener('click', (event) => {
+    window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: 'smooth' 
+       });
+
+})
