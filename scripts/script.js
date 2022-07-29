@@ -30,7 +30,7 @@ for ( i in products ) {
         </svg>`
 
     let textButton = '<p>0</p>'
-    let textQntdRecheio = btnAddRecheio + textButton + btnMinusRecheio
+    let textQntdRecheio = btnMinusRecheio + textButton + btnAddRecheio
     
     // FUNÇÕES QUE COLOCAM OS ITENS NA SEÇÃO
 function gerarRecheiosFruits(recheio, section, id) {
@@ -81,10 +81,6 @@ function gerarRecheiosFillings(recheio) {
     }
 }
 
-    // CHAMADA
-    gerarRecheiosFruits('fruits')
-    gerarRecheiosCreams('creams')
-    gerarRecheiosFillings('fillings')
 
 // HTML DOS RECHEIOS DOS SORVETES
 
@@ -135,8 +131,4 @@ function gerarRecheiosToppings(recheio) {
             document.getElementById('items-recheios-toppings').innerHTML += recheio;
     }
 }
-    // CHAMADA 
 
-    gerarRecheiosFlavors('flavors')
-    gerarRecheiosFillingsIceCream('fillings')
-    gerarRecheiosToppings('toppings')
