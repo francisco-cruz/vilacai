@@ -1,43 +1,18 @@
 function openModalRecheio(contentProduto) {
 
   // DATA-ATTRIBUTS DOS PRODUTOS
-
   const section = contentProduto.getAttribute("data-section")
   const id = contentProduto.getAttribute("data-id-product")
 
   let data = products[section][id]
 
-  // Fazer funcao
-  // if (!qntdRecheios[section])
-    // qntdRecheios.add(section, {
-    //   "id": id,
-    //   "name": data["name"],
-    //   "qntd": 0
-    // });
-
-    // qntdRecheios.
-    // qntdRecheios.set(section, {"id": id, "name": data['name'], "qntd": 0})
-    
-    // qntdRecheios.put(section, {
-    //   "id": id,
-    //   "name": data['name'],
-    //   "qntd": 0
-    // }
-
-  // RECEBE O OBJETO PRODUCTS
-
- 
-
   // SETAR A QAUNTIDADE DO PRODUTO NA FUNÇÃO DESATIVAR BOTÃO QUANTIDADE DO MODAL RECHEIO
-
   btnContinueDesable(section, id)
 
   // ABRE A SEÇÃO NO MODAL RECHEIO
-
   openSectionInModal(section, id)
 
   //GERA HTML DO CABEÇALHO DO MODAL RECHEIO
-
   htmlContentModal(section, id);
 
   // MOSTRA MODAL RECHEIO
@@ -45,49 +20,40 @@ function openModalRecheio(contentProduto) {
   modal.style.display = 'flex'
 
   // DESATIVAR SCROLL
-
   let scroll = document.querySelector("html");
   scroll.style.overflow = "hidden"
 
   // PREÇO INICIAL DO BOTÃO CONTINUAR
-
   data['value'] = data['qntd'] * data['price']
 
   document.querySelector('#text-qtd-footer').innerText = data['qntd']
   document.querySelector('#price-total').innerText = 'R$ ' + data['value'] + ',00'
 
-  // incrementQntdRecheio(section, id)
 }
 
-
 // FECHAR MODAL
-
 function closedModalRecheio() {
-
   let modal = document.querySelector('.bg-modal-recheio');
   modal.style.display = 'none'
 
   // COLOCAR SCROLL 
-
   let body = document.querySelector("html");
   body.style.overflow = "auto"
 
 }
 
 // RETORNA A SEÇÃO E O ID DE CADA PRODUTO
-
 function getContentModal(section, id) {
   return products[section][id];
+
 }
 
 // GERA HTML DO MODAL RECHEIO
 
 function htmlContentModal(section, id) {
-
   let data = getContentModal(section, id);
 
   // GERA HTML DA DIV CONTENT DO MODAL RECHEIO
-
   let content = '<img class="img-modal-recheio" src="' + data["img"] + '" alt="">' +
     '<div class="info-modal-recheio">' +
     '<p class="section-modal-recheio">' + data["section"] + '</p>' +
@@ -111,12 +77,11 @@ function htmlContentModal(section, id) {
 
   document.getElementById("btn-add-footer").setAttribute("onclick", `incrementQntd("${section}", ${id})`)
   document.getElementById("btn-minus-footer").setAttribute("onclick", `decrementQntd("${section}", ${id})`)
+
 }
 
 // INCREMENTAR VALOR EM BOTÃO CONTINUE
-
 function incrementQntd(section, id) {
-
   let data = products[section][id]
 
   if (data['qntd'] >= 0 && data['qntd'] < 10) {
@@ -130,65 +95,46 @@ function incrementQntd(section, id) {
 }
 
 // DECREMENTAR VALOR EM BOTÇAO CONTINUE
-
 function decrementQntd(section, id) {
-
   let data = products[section][id]
 
   if (data['qntd'] > 0) {
     data['qntd']--
     data['value'] = data['qntd'] * data['price']
 
-    console.log(data['qntd'])
-
     btnContinueDesable(section, id)
 
     document.querySelector('#text-qtd-footer').innerText = data['qntd']
     document.querySelector('#price-total').innerText = 'R$ ' + data['value'] + ',00'
-
 
   }
 }
 
 // IMCREMENTAR EM QUANTIDADE TOTAL DE RECHEIOS
 
-function incrementQntdRecheio(object, sectionProduct, idProduct) {
-  let section = object.getAttribute("data-recheio")
-  let id = Number(object.getAttribute("data-id"))
-  // console.log(`${products[section][id]}`)
+function incrementQntdRecheio() {
+  const section = contentProduto.getAttribute("data-section")
+  const id = contentProduto.getAttribute("data-id-product")
+ 
+  let data = products[section][id]
+  console.log(section,id);
 
-  // console.log(recheios[section][id])
+    // let textCont = document.getElementById('text-cont-additionais').value;
+    // console.log(textCont);
+    // let textContTotal= textCont.value
 
-  let recheio = recheios[section][id]
 
-  let produto = products[sectionProduct][idProduct]
-
-  console.log(qntdRecheios)
-
-  // let textCont = document.getElementById('text-cont-additionais');
-  // let textContTotal= textCont.value
-
-  let qntdRecheioProduto = qntdRecheios[sectionProduct]
-
-  for (i in qntdRecheioProduto){
-    console.log(qntdRecheioProduto)
-  }
-
-  return
-  // let qntdRecheioProduto = qntdRecheios[sectionProduct][idProduct]
-
-  console.log(`QNTD: ${textContTotal}`)
-
-  console.log(`PRODUTO: ${produto["name"]}`)
+    // if (data['qntd'] > 0) {
+    //   data['qntd']--
+    //   data['value'] = data['qntd'] * data['price']
   
-  if (textContTotal < produto['qntd-additionais']) {
-    console.log(`PRODUTO: ${produto}`)
-      textContTotal++
-      textContTotal.innerText = textContTotal
-    
-  console.log(textContTotal)
-
-  }
+    //   console.log(data['qntd'])
+  
+    //   btnContinueDesable(section, id)
+  
+    //   document.querySelector('#text-qtd-footer').innerText = data['qntd']
+    //   document.querySelector('#price-total').innerText = 'R$ ' + data['value'] + ',00'
+  
 }
 
 

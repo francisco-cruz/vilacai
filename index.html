@@ -184,22 +184,27 @@
         <!-- seção dos recheios do açaí -->
         <section id="modal-acai" class="recheio">
 
-           <!-- tipo do açai -->
-        <div id="type-acai">
-          <div class="qtd-recheio">
-            <p class="title-qtd-recheio">Tipo</p>
+          <!-- tipo do açai -->
+          <div id="type-acai">
+            <div class="qtd-recheio">
+              <p class="title-qtd-recheio">Tipo</p>
           </div>
-          <idiv class="acai-radio">
 
-            <input id="acai-tradicional" type="radio">
-            <label for="acai-tradicional">Açaí tradicional</label>
-          </idiv>
-          <div class="acai-radio">
+            <div class="acai-radio">
+              <label>
+                <input id="acai-tradicional" name="type-acai" type="radio" value="Tradicional">
+                Açaí tradicional
+              </label>
+            </div>
 
-            <input id="acai-cremoso" type="radio">
-            <label for="acai-cremoso">Açaí cremoso</label>
+            <div class="acai-radio">
+              <label for="acai-cremoso">
+                <input id="acai-cremoso" name="type-acai" type="radio" value="Cremoso">
+                Açaí cremoso
+              </label>
+            </div>
+
           </div>
-        </div>
 
           <!-- contador de recheios -->
           <div class="qtd-recheio">
@@ -282,7 +287,7 @@
   <!-- scripts -->
   <!-- banco de dados -->
   <script type="text/javascript" src="scripts/database.js"></script>
-  
+
   <!-- botões tab -->
   <script type="text/javascript" src="scripts/tabs.js"></script>
   <!-- verificar se está aberto ou fechado -->

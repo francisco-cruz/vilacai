@@ -1,5 +1,4 @@
 // HTML DOS PRODUTOS
-
 for ( i in products ) {
     for ( j in products[i] ){
         let produto ='<div class="product" onclick="openModalRecheio(this)" data-section="' +  i + '" data-id-product="' + j + '" data-qntd-additionais="' + products[i][j]['qntd-additionais'] + '" >'+
@@ -12,12 +11,12 @@ for ( i in products ) {
                 '</div>' +
                 '</div>';
             document.getElementById(i).children[1].innerHTML += produto;
+
     }
 }
 
 // HTML DOS RECHEIOS AÇAI
-
-    let btnAddRecheio = `<svg class="btn-add-recheio-page" onclick="incrementQntdRecheio()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+    let btnAddRecheio = `<svg class="btn-add-recheio-page" onclick="incrementQntdRecheio(this)" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
         class="feather feather-plus">
         <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -31,11 +30,9 @@ for ( i in products ) {
         </svg>`
 
     let textButton = '<p>0</p>'
-
     let textQntdRecheio = btnAddRecheio + textButton + btnMinusRecheio
     
     // FUNÇÕES QUE COLOCAM OS ITENS NA SEÇÃO
-
 function gerarRecheiosFruits(recheio, section, id) {
     let recheiosDaSecao = recheios[recheio]
     for ( j in  recheiosDaSecao) {
@@ -43,34 +40,14 @@ function gerarRecheiosFruits(recheio, section, id) {
             <p>${recheiosDaSecao[j]['name']}</p>
             <div class="btn-quantidade">
 
-            <svg class="btn-add-recheio-page" id="btn-add-recheio-page" onclick="incrementQntdRecheio(this, '${section}', ${id})" data-recheio="fruits" data-id="${j}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-plus">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg>
+            ${textQntdRecheio}
 
-            <p>0</p>
-            
-            <svg class="btn-minus-recheio-page" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-minus">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg>
-            
             </div>
             </div>`
 
             document.getElementById('items-recheios-fruits').innerHTML += recheioData;   
     }
 }
-
-// function addQntdRecheio(section, id){
-//     console.log(`SECTION: ${section} ID: ${id}`)
-// }
-
-
-
 
 function gerarRecheiosCreams(recheio) {
     let recheiosDaSecao = recheios[recheio]
@@ -79,7 +56,10 @@ function gerarRecheiosCreams(recheio) {
             <p>${recheiosDaSecao[j]['name']}</p>
             <div class="btn-quantidade">
 
-            ${textQntdRecheio}`
+            ${textQntdRecheio}
+            
+            </div>
+            </div>`
 
             document.getElementById('items-recheios-creams').innerHTML += recheio;
     }
@@ -92,16 +72,19 @@ function gerarRecheiosFillings(recheio) {
             <p>${recheiosDaSecao[j]['name']}</p>
             <div class="btn-quantidade">
 
-            ${textQntdRecheio}`
+            ${textQntdRecheio}
+            
+            </div>
+            </div>`
 
             document.getElementById('items-recheios-fillings').innerHTML += recheio;
     }
 }
 
     // CHAMADA
-
-    // gerarRecheiosCreams('creams')
-    // gerarRecheiosFillings('fillings')
+    gerarRecheiosFruits('fruits')
+    gerarRecheiosCreams('creams')
+    gerarRecheiosFillings('fillings')
 
 // HTML DOS RECHEIOS DOS SORVETES
 
@@ -112,7 +95,10 @@ function gerarRecheiosFlavors(recheio) {
             <p>${recheiosDaSecao[j]['name']}</p>
             <div class="btn-quantidade">
 
-            ${textQntdRecheio}`
+            ${textQntdRecheio}
+            
+            </div>
+            </div>`
 
             document.getElementById('items-recheios-flavors').innerHTML += recheio;
     }
@@ -125,7 +111,10 @@ function gerarRecheiosFillingsIceCream(recheio) {
             <p>${recheiosDaSecao[j]['name']}</p>
             <div class="btn-quantidade">
 
-            ${textQntdRecheio}`
+            ${textQntdRecheio}
+            
+            </div>
+            </div>`
 
             document.getElementById('items-recheios-fillings-icecream').innerHTML += recheio;
     }
@@ -138,7 +127,10 @@ function gerarRecheiosToppings(recheio) {
             <p>${recheiosDaSecao[j]['name']}</p>
             <div class="btn-quantidade">
 
-            ${textQntdRecheio}`
+            ${textQntdRecheio}
+            
+            </div>
+            </div>`
 
             document.getElementById('items-recheios-toppings').innerHTML += recheio;
     }

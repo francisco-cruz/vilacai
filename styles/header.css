@@ -1,12 +1,13 @@
 main {
     margin-top: 32px;
+    margin-bottom: 32px;
     border-radius: 16px;
-    min-width: 1366px;
+    width: 1300px;
     min-height: 100vh;
     border-radius: 8px;;
     background-color: white;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.02);
-    position: absolute;
+    position: relative;
   }
   
 .perfil-bg {

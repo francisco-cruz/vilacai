@@ -66,7 +66,15 @@
     cursor: pointer;
 }
 .bg-icon-back:active {
-    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+    animation: btnBackModal .15s;
+}
+
+@keyframes btnBackModal {
+    50% {
+        box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2) inset;
+        transform: scale(.9);
+    }
+    
 }
 
 /* imagem do modal */
@@ -144,6 +152,7 @@
 
 .recheio {
     margin-top: 32px;
+    margin-bottom: 90px;
     display: none;
 }
 

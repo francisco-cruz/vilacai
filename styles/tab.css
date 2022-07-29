@@ -9,12 +9,17 @@
     font-weight: 400;
     background-color: transparent;
     border: none;
-    color: #A6A6A6;
-    padding: 4px 16px;
+    color: #1C1C1C;
+    padding: 3px 16px;
     margin-left: 16px;
-    transition: color .3s;
+
+
+    transition: all .4s;
+
 }
+
 /* conteudo da seção */
+
 .title {
     margin-left: 16px;
     margin-top: 24px;
@@ -31,9 +36,9 @@
     background-color: #522E73;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    padding-bottom: 18px;
-    transition: background-color .5s initial;
-    box-shadow: 3px 2px 5px 1px rgba(0, 0, 0, 0.2)
+    padding-bottom: 15px;
+    transition: all .5s initial;
+    box-shadow: 3px 2px 8px 1px rgba(0, 0, 0, 0.2)
 }
 
 .products {
@@ -52,20 +57,21 @@
 
 .line-product {
     width: 100%;
-    margin-top: -6px;
+    margin-top: -7px;
     height: 6px;
     background-color: #522E73;
 
 }
 .product {
     margin-top: 24px;
-    width: 420px;
+    width: 390px;
     border-radius: 4px;
     height: 380px;
     background-color: white;
     cursor: pointer;
-    transition: transform .3s;
+    transition: all .3s;
     border: 1px rgba(0, 0, 0, 0.09) solid;
+    transition: all .3s;
 }
 
 .product:hover {
