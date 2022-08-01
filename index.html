@@ -13,9 +13,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./imagens/favicons/favicon-16x16.png">
   <!-- estilos -->
   <link rel="stylesheet" href="./styles/global.css">
+
+  <script src="https://kit.fontawesome.com/7a044f6aca.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <img src=".imagens/bg-folhas.png" alt="">
   <main>
 
     <!-- cabeçalho -->
@@ -111,9 +114,52 @@
       </div>
     </section>
     </div>
+
+    <!-- sacola da loja -->
+    <div class="bag-store">
+      <div class="items-bag" onclick="openModalCarrinho()">
+
+        <div class="icon-bag">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+
+        <div class="text-bag">
+          <p class="title-bag">Sacola vazia</p>
+          <p class="sub-title-bag">Selecione os itens e adicione a sacola</p>
+        </div>
+
+        <div class="price-bag">R$ 0,00</div>
+      </div>
+    </div>
+
     <!-- footer page -->
     <footer id="footer-page">
-      <p>Francisco Cruz 2022.</p>
+      <div class="btn-back-top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-chevron-up">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </div>
+      <div class="logo-vila">
+        <div class="items-logo">
+          <p>Vilaçaí</p>
+        </div>
+        <div class="line"></div>
+        <div class="sociais">
+          <i class="fa-brands fa-whatsapp"></i>
+          <a href="https://www.instagram.com/vilacaijucurutu/" target="_blank">
+
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+
+        </div>
+      </div>
+
+      <div class="contact-dev">
+        <a href="">Contato do desenvolvedor</a>
+        </divi>
     </footer>
   </main>
 
@@ -184,22 +230,26 @@
         <!-- seção dos recheios do açaí -->
         <section id="modal-acai" class="recheio">
 
-           <!-- tipo do açai -->
-        <div id="type-acai">
-          <div class="qtd-recheio">
-            <p class="title-qtd-recheio">Tipo</p>
-          </div>
-          <idiv class="acai-radio">
+          <!-- tipo do açai -->
+          <div id="type-acai">
+            <div class="qtd-recheio">
+              <p class="title-qtd-recheio">Tipo</p>
+            </div>
 
-            <input id="acai-tradicional" type="radio">
-            <label for="acai-tradicional">Açaí tradicional</label>
-          </idiv>
-          <div class="acai-radio">
+            <div class="acai-radio">
+              <label>
+                <input id="acai-tradicional" name="type-acai" type="radio" value="Tradicional">
+                Açaí tradicional
+              </label>
+            </div>
 
-            <input id="acai-cremoso" type="radio">
-            <label for="acai-cremoso">Açaí cremoso</label>
+            <div class="acai-radio">
+              <label for="acai-cremoso">
+                <input id="acai-cremoso" name="type-acai" type="radio" value="Cremoso">
+                Açaí cremoso
+              </label>
+            </div>
           </div>
-        </div>
 
           <!-- contador de recheios -->
           <div class="qtd-recheio">
@@ -247,42 +297,94 @@
             <!-- item -->
           </div>
 
+        </section>
+        <div class="sugestoes">
+          <div class="text-sugestao">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-message-square">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <p>Alguma sugestão?</p>
+          </div>
+          <textarea required placeholder="Ex: muita Nutella e pouco morango"></textarea>
+        </div>
+
       </div>
-      </section>
-
-
       <!-- footer modal recheios -->
       <div class="footer">
         <div class="items-footer">
           <div class="btn-qtd-footer">
+            <svg id="btn-minus-footer" onclick="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="feather feather-minus">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+  
+            <p id="text-qtd-footer">0</p>
+  
             <svg id="btn-add-footer" onclick="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
               viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" class="feather feather-plus">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
-            <p id="text-qtd-footer">0</p>
-            <svg id="btn-minus-footer" onclick="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" class="feather feather-minus">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg>
+  
           </div>
           <div class="btn-continue">
             <p>Continue&nbsp;</p>
             <p id="text-btn-continue"></p>
             <p id="price-total"></p>
           </div>
-
+  
         </div>
       </div>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+  </div>
+
+
+  <!-- modal carrinho -->
+  <div class="bg-modal-carrinho">
+    <div class="modal-carrinho">
+      <header class="header-modal-recheio">
+        <!-- icone voltar -->
+        <div class="items-header-modal-recheio">
+          <div class="bg-icon-back" onclick="closedModalCarrinho()">
+            <svg id="icon-back" onclick="closedModalRecheio()" width="10" height="18" viewBox="0 0 10 18" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.725 2.225L8.25 0.75L0 9L8.25 17.25L9.725 15.775L2.95 9L9.725 2.225Z" fill="black" />
+            </svg>
+          </div>
+          <h1>Vilaçaí</h1>
+        </div>
+      </header>
+      <main class="main-modal-carrinho">
+        <h1>carinho de compras</h1>
+
+      </main>
+      <!-- footer modal recheios -->
+      <div class="footer">
+        <div class="btn-pedido">Fazer pedido</div>
+      </div>
+
+
+
     </div>
   </div>
 
   <!-- scripts -->
   <!-- banco de dados -->
   <script type="text/javascript" src="scripts/database.js"></script>
-  
+
   <!-- botões tab -->
   <script type="text/javascript" src="scripts/tabs.js"></script>
   <!-- verificar se está aberto ou fechado -->
@@ -293,6 +395,10 @@
   <script type="text/javascript" src="scripts/script.js"></script>
   <!-- modal de adiconar recheios -->
   <script type="text/javascript" src="scripts/modalRecheio.js"></script>
+  <!-- modal carrinho -->
+  <script type="text/javascript" src="scripts/modalCarrinho.js"></script>
+
+
 </body>
 
 </html>

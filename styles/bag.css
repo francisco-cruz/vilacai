@@ -1,0 +1,45 @@
+.bag-store {
+    width: 100%;
+    height: 60px;
+    background-color: #323035;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items-bag {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.icon-bag {
+    color: white;
+}
+
+.text-bag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-bag {
+    color: white;
+    font-weight: 600;
+}
+
+.sub-title-bag {
+    color: #ffffff90;
+    font-size: 14px;
+}
+
+.price-bag {
+    font-size: 20px;
+    color: white;
+}

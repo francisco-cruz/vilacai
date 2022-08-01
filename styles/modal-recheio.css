@@ -66,7 +66,15 @@
     cursor: pointer;
 }
 .bg-icon-back:active {
-    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+    animation: btnBackModal .15s;
+}
+
+@keyframes btnBackModal {
+    50% {
+        box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2) inset;
+        transform: scale(.9);
+    }
+    
 }
 
 /* imagem do modal */
@@ -144,6 +152,7 @@
 
 .recheio {
     margin-top: 32px;
+    margin-bottom: 90px;
     display: none;
 }
 
@@ -261,4 +270,41 @@
     margin-bottom: 24px;
     margin-top: 24px;
     margin-left: 16px;
+}
+
+
+.sugestoes {
+    margin-bottom: 70px;
+    width: 100%;
+    height: auto;
+
+    position: relative;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-sugestao {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
+
+.text-sugestao svg {
+    width: 20px;
+    margin-right: 8px;
+}
+.sugestoes textarea {
+    margin: 0 16px;
+    resize: none;
+    padding: 8px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.sugestoes textarea:focus {
+    border-color: #522E73;
 }

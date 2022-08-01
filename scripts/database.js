@@ -425,13 +425,11 @@ let recheiosIceCream = {
         "qntd": 0,
     },
     {
-
         "section": "Sabores",
         "name": "Açaí",
         "qntd": 0,
     },
     {
-
         "section": "Sabores",
         "name": "Menta",
         "qntd": 0,
@@ -439,5 +437,3 @@ let recheiosIceCream = {
 ],
     
 }
-
-let qntdRecheios = new Map()

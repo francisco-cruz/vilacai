@@ -1,0 +1,39 @@
+.bg-modal-carrinho{
+    background-color: rgba(0, 0, 0, .3);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.modal-carrinho {
+    background-color: white;
+    width: 550px;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  
+    position: absolute;
+    animation: openModalRecheio .5s ease-in-out;
+   
+}
+
+.btn-pedido {
+    font-weight: bold;
+    background-color: #FFCC59;
+    padding: 21px 70px;
+    border-radius: 8px;
+    transition: background-color .5s;
+    cursor: pointer;
+    display: flex;
+}
+
+.main-modal-carrinho {
+    margin-top:100px
+}
