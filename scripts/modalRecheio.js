@@ -7,26 +7,6 @@ function openModalRecheio(contentProduto) {
 
   let data = products[section][id]
 
-  // Fazer funcao
-  // if (!qntdRecheios[section])
-    // qntdRecheios.add(section, {
-    //   "id": id,
-    //   "name": data["name"],
-    //   "qntd": 0
-    // });
-
-    // qntdRecheios.
-    // qntdRecheios.set(section, {"id": id, "name": data['name'], "qntd": 0})
-    
-    // qntdRecheios.put(section, {
-    //   "id": id,
-    //   "name": data['name'],
-    //   "qntd": 0
-    // }
-
-  // RECEBE O OBJETO PRODUCTS
-
- 
 
   // SETAR A QAUNTIDADE DO PRODUTO NA FUNÇÃO DESATIVAR BOTÃO QUANTIDADE DO MODAL RECHEIO
 
